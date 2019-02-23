@@ -1,2 +1,2 @@
-# C-C-
+# C-Cpp
 Learn C/C++
