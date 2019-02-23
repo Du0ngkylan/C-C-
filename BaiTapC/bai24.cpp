@@ -24,5 +24,5 @@ int main()
 		cout<< n << " la so nguyen to!";
 	else
 		cout<< n <<" khong la so nguyen to!";
-	cout<<endl;
+
 }
