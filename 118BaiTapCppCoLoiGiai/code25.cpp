@@ -19,7 +19,7 @@ int main() {
     else
       b = b - a;
 
-  i = (c*d)/a;
+    i = (c*d)/a;
   }
   cout << "USCLN cua a va b la: " << a << endl;
   cout << "BSCNN cua a va b la: " << i;
