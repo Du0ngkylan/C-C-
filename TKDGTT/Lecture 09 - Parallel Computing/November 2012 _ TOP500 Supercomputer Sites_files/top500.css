@@ -1,0 +1,222 @@
+/* @override http://10.0.1.58:8081/static/css/top500.css */
+
+/* @override http://10.0.1.58:8080/static/css/top500.css */
+
+html, body {
+    padding-top: 0px;
+    background-image: url(../img/top500/sliced_02.gif);
+    background-repeat: repeat-x;
+
+}
+
+p {
+    color: #39434c;
+    font: 1.1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    line-height: 1.5em;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1 {
+    color: #ff9300;
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h2, h3, h4, h2 a, h3 a, h4 a {
+    color: black;
+}
+
+.brand {
+    background: url(../img/top500/header.jpg) no-repeat left center;
+    height: 20px;
+    width: 100px;
+}
+
+#features {
+    height: 322px;
+}
+
+#features img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    height: 130px;
+    background-image: url(../img/top500/header.jpg);
+    background-repeat: no-repeat;
+}
+
+.leaderboard {
+    margin-top: 10px;
+    float: right;
+}
+
+.caption img {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caption p {
+    text-align: center;
+    font-size: 1.1em;
+    color: gray;
+    font-style: italic;
+}
+
+li p {
+    margin-bottom: 0;
+}
+
+.panel li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.timestamp {
+    color: #768696;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0.9em;
+    padding-bottom: 5px;
+}
+
+.blog-list-detail {
+    margin: 0;
+    line-height: 1.4em;
+    font-size: 1.1em;
+    padding-bottom: 15px;
+}
+
+.nav {
+    font-weight: bold;
+}
+
+.centered {
+    text-align: center;
+}
+
+.feature-image {
+    float: right;
+    margin: 10px;
+}
+
+.tagline {
+    float: left;
+    font-size: 16px;
+    font-style: italic;
+    margin: 9px 9px 5px -4px;
+    color: #fff;
+    opacity: .5;
+}
+
+#rightwell {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    margin: 0;
+    border: 0;
+    padding: 0px;
+    background: white;
+}
+
+table caption, th, tfoot td {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table caption {
+    font-size: 40px;
+    font-weight: normal;
+    font-variant: small-caps;
+    color: #f60;
+    letter-spacing: .3em;
+    text-align: center;
+    padding-bottom: .5em;
+}
+
+td, th {
+    padding: 5px;
+    font-size: 0.9em;
+
+}
+
+/* THEAD */
+thead th {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #ff7f00;
+    height: 46px;
+    padding-bottom: 0;
+    border: 0;
+}
+
+/* TFOOT */
+tfoot th, tfoot td {
+    font-weight: bold;
+}
+
+/* TBODY */
+tbody td, tbody th {
+    line-height: 110%;
+}
+
+tbody tr td {
+    background-color: #fff;
+}
+
+tbody tr.odd td, tbody tr.odd th {
+    background-color: #eee;
+}
+
+tbody tr td.odd {
+    background-color: #eee;
+}
+
+tbody tr td.even {
+    background-color: #fff;
+}
+
+tbody th a {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.featured-thumb {
+    float: left;
+    width: 90px;
+    height: 90px;
+    margin: 0 10px 0 0;
+}
+
+.navbar .nav,
+.navbar .nav > li {
+    float: none;
+    display: inline-block;
+    *display: inline; /* ie7 fix */
+    *zoom: 1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+
+#google_ads_div_button_4_ad_wrapper, #google_ads_div_button_1_ad_wrapper, #google_ads_div_button_2_ad_wrapper, #google_ads_div_button_3_ad_wrapper, #google_ads_div_button_5_ad_wrapper {
+    margin-bottom: 5px;
+}
+
+.carousel-caption h3 a{
+    color: #ffffff;
+}
+.carousel-caption p{
+    color: #ffffff;
+
+}

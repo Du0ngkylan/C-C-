@@ -1,0 +1,38 @@
+/*
+   Author: Group 1
+   Copyringht: Group 1
+   Description: Greedy Clustering Algorithm
+   Date: 15h35 2012 Apr 16th
+*/
+
+#include<conio.h>
+#include<iostream.h>
+#include<math.h>
+#include<stdlib.h>
+#include<stdio.h>
+
+int const MaxSize=100;//Maximal number of object
+int n; //Number of object
+float a[MaxSize][MaxSize];//Distance Matrice of Objects
+
+
+//Input the number of objects and the Distance Matrice from file MatranKC.txt
+void InputData(){
+	FILE *f;
+	f = fopen("MatranKC.txt","r");
+	if (!f){
+		printf("\n Loi mo tep"); getch(); exit(0);
+		}
+	fscanf(f,"%d",&n);//Read the number of objects
+	//Read distances between objects from the distance matrice
+	for (int i=1; i<=n; i++)
+	for (int j=1; j<=n; j++)
+	fscanf(f,"%f",&a[i][j]);
+	fclose(f);
+}
+
+int main(){
+	InputData();
+	getch();
+	return 0;
+}

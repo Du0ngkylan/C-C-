@@ -1,0 +1,8 @@
+do thi duong di
+0	2	3	6	
+1	0	5	2	
+3	2	7	1	
+0	2	1	9	
+ket qua la:
+1 -> 2 -> 4 -> 3 -> 1 
+chiphi   8
