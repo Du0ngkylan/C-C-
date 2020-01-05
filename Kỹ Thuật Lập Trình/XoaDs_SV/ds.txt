@@ -1,0 +1,8 @@
+3
+pham thi tien  
+3 5 
+ngo quoc hung 
+9 10 
+nguyen van trong 
+10 9 
+

@@ -1,0 +1,19 @@
+8
+Hoa
+5 4
+Trung
+3 3
+Quang
+6 7
+Nhung
+5 3
+Lan
+5 1
+Thu
+9 9
+Manh
+1 5
+Thien
+2 3
+Truong
+0 0
