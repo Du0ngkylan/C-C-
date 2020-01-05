@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Thay doi con tro khi ra khoi ham", "Thay doi con tro khi ra khoi ham\Thay doi con tro khi ra khoi ham.vcxproj", "{3E36EC1E-3409-4B44-9F63-6F2741EF9375}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ma tran", "Ma tran\Ma tran.vcxproj", "{14D6CEE7-E97A-41D9-9BCC-F2B6CB389E2E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Con trỏ cấp 2 và mảng động 2 chiều", "Con trỏ cấp 2 và mảng động 2 chiều\Con trỏ cấp 2 và mảng động 2 chiều.vcxproj", "{690FC9AC-DE50-4FA8-8D2C-CD3A7EE0EA4F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Thêm, xóa trong mảng động 2 chiều", "Thêm, xóa trong mảng động 2 chiều\Thêm, xóa trong mảng động 2 chiều.vcxproj", "{DADCD9BD-B400-49A6-9E0F-87363C220D0A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Con trỏ vô kiểu", "Con trỏ vô kiểu\Con trỏ vô kiểu.vcxproj", "{8DFCCC7E-B396-45A5-825B-6B371375BB36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E36EC1E-3409-4B44-9F63-6F2741EF9375}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3E36EC1E-3409-4B44-9F63-6F2741EF9375}.Debug|Win32.Build.0 = Debug|Win32
+		{3E36EC1E-3409-4B44-9F63-6F2741EF9375}.Release|Win32.ActiveCfg = Release|Win32
+		{3E36EC1E-3409-4B44-9F63-6F2741EF9375}.Release|Win32.Build.0 = Release|Win32
+		{14D6CEE7-E97A-41D9-9BCC-F2B6CB389E2E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{14D6CEE7-E97A-41D9-9BCC-F2B6CB389E2E}.Debug|Win32.Build.0 = Debug|Win32
+		{14D6CEE7-E97A-41D9-9BCC-F2B6CB389E2E}.Release|Win32.ActiveCfg = Release|Win32
+		{14D6CEE7-E97A-41D9-9BCC-F2B6CB389E2E}.Release|Win32.Build.0 = Release|Win32
+		{690FC9AC-DE50-4FA8-8D2C-CD3A7EE0EA4F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{690FC9AC-DE50-4FA8-8D2C-CD3A7EE0EA4F}.Debug|Win32.Build.0 = Debug|Win32
+		{690FC9AC-DE50-4FA8-8D2C-CD3A7EE0EA4F}.Release|Win32.ActiveCfg = Release|Win32
+		{690FC9AC-DE50-4FA8-8D2C-CD3A7EE0EA4F}.Release|Win32.Build.0 = Release|Win32
+		{DADCD9BD-B400-49A6-9E0F-87363C220D0A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DADCD9BD-B400-49A6-9E0F-87363C220D0A}.Debug|Win32.Build.0 = Debug|Win32
+		{DADCD9BD-B400-49A6-9E0F-87363C220D0A}.Release|Win32.ActiveCfg = Release|Win32
+		{DADCD9BD-B400-49A6-9E0F-87363C220D0A}.Release|Win32.Build.0 = Release|Win32
+		{8DFCCC7E-B396-45A5-825B-6B371375BB36}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8DFCCC7E-B396-45A5-825B-6B371375BB36}.Debug|Win32.Build.0 = Debug|Win32
+		{8DFCCC7E-B396-45A5-825B-6B371375BB36}.Release|Win32.ActiveCfg = Release|Win32
+		{8DFCCC7E-B396-45A5-825B-6B371375BB36}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

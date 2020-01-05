@@ -1,0 +1,4 @@
+1 | Nguyen Ai Tuan  | 01648315269 | Nam | 8.9
+2 | Huynh Phu Hung | 3486431321 | Nam | 8
+3 | Luu Dinh Mac | 23154586 | Nam | 5
+4 | Truong Thai An | 54863165 | Nam | 10

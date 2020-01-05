@@ -1,0 +1,28 @@
+int main()
+{
+	
+	ifstream Infile;
+	string Filename;
+	Infile.open("Text.txt",ios::in);
+
+	if(Infile.is_open() == false)
+	{
+		cout<<"Ko the mo tap tin de doc!";
+		cin.get();
+		return 0;
+	}
+	int dem = 0 ; 
+	string s ;
+	while(getline(Infile,s))
+	{
+		 
+				Infile>>s;
+	}
+	Infile.close();
+	ofstream Outfile;
+	Outfile.open("KETQUA.txt", ios::out);
+	Outfile<<s;
+	Outfile.close();
+	system("pause");
+	return 0;
+}

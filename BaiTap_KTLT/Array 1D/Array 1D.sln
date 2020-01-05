@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Insert, delete element", "Insert, delete element\Insert, delete element.vcxproj", "{AC7BF5A6-3192-4EEF-A16E-3B6F0B68F505}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Khoi tao mang 1 chieu", "Khoi tao mang 1 chieu\Khoi tao mang 1 chieu.vcxproj", "{D8767724-32A3-47C8-9960-96907B8DCE97}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gan mang", "Gan mang\Gan mang.vcxproj", "{498503AD-0F0F-47C5-A188-EC3C4505AC4C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BT mang 1 chieu buoi 1", "BT mang 1 chieu buoi 1\BT mang 1 chieu buoi 1.vcxproj", "{9E37FCD9-FD39-438B-8CCB-E9271CE82C27}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BT mang 1 chieu buoi 2", "BT mang 1 chieu buoi 2\BT mang 1 chieu buoi 2.vcxproj", "{6A3A2887-30F8-424A-B09B-5645C505799E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BT Thêm , xóa phần tử", "BT Thêm , xóa phần tử\BT Thêm , xóa phần tử.vcxproj", "{9796400A-0917-4F29-B2BB-B29F2734B2D1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sửa BT thêm, xóa", "Sửa BT thêm, xóa\Sửa BT thêm, xóa.vcxproj", "{EEA8466D-4140-4A6D-970D-63AE71E66730}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC7BF5A6-3192-4EEF-A16E-3B6F0B68F505}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AC7BF5A6-3192-4EEF-A16E-3B6F0B68F505}.Debug|Win32.Build.0 = Debug|Win32
+		{AC7BF5A6-3192-4EEF-A16E-3B6F0B68F505}.Release|Win32.ActiveCfg = Release|Win32
+		{AC7BF5A6-3192-4EEF-A16E-3B6F0B68F505}.Release|Win32.Build.0 = Release|Win32
+		{D8767724-32A3-47C8-9960-96907B8DCE97}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D8767724-32A3-47C8-9960-96907B8DCE97}.Debug|Win32.Build.0 = Debug|Win32
+		{D8767724-32A3-47C8-9960-96907B8DCE97}.Release|Win32.ActiveCfg = Release|Win32
+		{D8767724-32A3-47C8-9960-96907B8DCE97}.Release|Win32.Build.0 = Release|Win32
+		{498503AD-0F0F-47C5-A188-EC3C4505AC4C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{498503AD-0F0F-47C5-A188-EC3C4505AC4C}.Debug|Win32.Build.0 = Debug|Win32
+		{498503AD-0F0F-47C5-A188-EC3C4505AC4C}.Release|Win32.ActiveCfg = Release|Win32
+		{498503AD-0F0F-47C5-A188-EC3C4505AC4C}.Release|Win32.Build.0 = Release|Win32
+		{9E37FCD9-FD39-438B-8CCB-E9271CE82C27}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9E37FCD9-FD39-438B-8CCB-E9271CE82C27}.Debug|Win32.Build.0 = Debug|Win32
+		{9E37FCD9-FD39-438B-8CCB-E9271CE82C27}.Release|Win32.ActiveCfg = Release|Win32
+		{9E37FCD9-FD39-438B-8CCB-E9271CE82C27}.Release|Win32.Build.0 = Release|Win32
+		{6A3A2887-30F8-424A-B09B-5645C505799E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6A3A2887-30F8-424A-B09B-5645C505799E}.Debug|Win32.Build.0 = Debug|Win32
+		{6A3A2887-30F8-424A-B09B-5645C505799E}.Release|Win32.ActiveCfg = Release|Win32
+		{6A3A2887-30F8-424A-B09B-5645C505799E}.Release|Win32.Build.0 = Release|Win32
+		{9796400A-0917-4F29-B2BB-B29F2734B2D1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9796400A-0917-4F29-B2BB-B29F2734B2D1}.Debug|Win32.Build.0 = Debug|Win32
+		{9796400A-0917-4F29-B2BB-B29F2734B2D1}.Release|Win32.ActiveCfg = Release|Win32
+		{9796400A-0917-4F29-B2BB-B29F2734B2D1}.Release|Win32.Build.0 = Release|Win32
+		{EEA8466D-4140-4A6D-970D-63AE71E66730}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EEA8466D-4140-4A6D-970D-63AE71E66730}.Debug|Win32.Build.0 = Debug|Win32
+		{EEA8466D-4140-4A6D-970D-63AE71E66730}.Release|Win32.ActiveCfg = Release|Win32
+		{EEA8466D-4140-4A6D-970D-63AE71E66730}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

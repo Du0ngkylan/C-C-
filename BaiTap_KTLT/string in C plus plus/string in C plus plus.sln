@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo 01", "Demo 01\Demo 01.vcxproj", "{F3AA23AF-E694-4DDE-A51A-942C0FD9E655}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Toán tử so sánh", "Toán tử so sánh\Toán tử so sánh.vcxproj", "{0C7D7C81-B242-4267-AEBC-C483B0F16127}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Các phương thức", "Các phương thức\Các phương thức.vcxproj", "{2FB4DA6F-F1C1-418F-8727-AECB1AF6063E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bài tập áp dụng", "Bài tập áp dụng\Bài tập áp dụng.vcxproj", "{908CF52E-9541-40FB-B479-FE64AE3FF0A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3AA23AF-E694-4DDE-A51A-942C0FD9E655}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3AA23AF-E694-4DDE-A51A-942C0FD9E655}.Debug|Win32.Build.0 = Debug|Win32
+		{F3AA23AF-E694-4DDE-A51A-942C0FD9E655}.Release|Win32.ActiveCfg = Release|Win32
+		{F3AA23AF-E694-4DDE-A51A-942C0FD9E655}.Release|Win32.Build.0 = Release|Win32
+		{0C7D7C81-B242-4267-AEBC-C483B0F16127}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0C7D7C81-B242-4267-AEBC-C483B0F16127}.Debug|Win32.Build.0 = Debug|Win32
+		{0C7D7C81-B242-4267-AEBC-C483B0F16127}.Release|Win32.ActiveCfg = Release|Win32
+		{0C7D7C81-B242-4267-AEBC-C483B0F16127}.Release|Win32.Build.0 = Release|Win32
+		{2FB4DA6F-F1C1-418F-8727-AECB1AF6063E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2FB4DA6F-F1C1-418F-8727-AECB1AF6063E}.Debug|Win32.Build.0 = Debug|Win32
+		{2FB4DA6F-F1C1-418F-8727-AECB1AF6063E}.Release|Win32.ActiveCfg = Release|Win32
+		{2FB4DA6F-F1C1-418F-8727-AECB1AF6063E}.Release|Win32.Build.0 = Release|Win32
+		{908CF52E-9541-40FB-B479-FE64AE3FF0A7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{908CF52E-9541-40FB-B479-FE64AE3FF0A7}.Debug|Win32.Build.0 = Debug|Win32
+		{908CF52E-9541-40FB-B479-FE64AE3FF0A7}.Release|Win32.ActiveCfg = Release|Win32
+		{908CF52E-9541-40FB-B479-FE64AE3FF0A7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

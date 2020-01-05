@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo quan ly sinh vien", "Demo quan ly sinh vien\Demo quan ly sinh vien.vcxproj", "{1028D1DD-DB42-4EB0-AD70-B11F0FE8EABF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo Mang sinh vien", "Demo Mang sinh vien\Demo Mang sinh vien.vcxproj", "{9C5D1592-E6CA-44D1-8473-62F8E8DF4F26}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quản lý vé xem phim", "Quản lý vé xem phim\Quản lý vé xem phim.vcxproj", "{73C944D9-EEE9-4D66-B373-6070D052D728}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Struct phân số", "Struct phân số\Struct phân số.vcxproj", "{86A42FF0-4ACE-4577-B4B8-9CD5AC6B9049}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QL Sinh viên ĐH NTT", "QL Sinh viên ĐH NTT\QL Sinh viên ĐH NTT.vcxproj", "{AF8EF4DF-8BBE-47CC-8BAF-1B679AC284A9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QL Khách sạn", "QL Khách sạn\QL Khách sạn.vcxproj", "{5D34AE0B-7D63-445D-88EB-FED18F4DD078}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Struct Tam giác", "Struct Tam giác\Struct Tam giác.vcxproj", "{FE38C0F0-0268-4274-AE57-B40AB16060F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1028D1DD-DB42-4EB0-AD70-B11F0FE8EABF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1028D1DD-DB42-4EB0-AD70-B11F0FE8EABF}.Debug|Win32.Build.0 = Debug|Win32
+		{1028D1DD-DB42-4EB0-AD70-B11F0FE8EABF}.Release|Win32.ActiveCfg = Release|Win32
+		{1028D1DD-DB42-4EB0-AD70-B11F0FE8EABF}.Release|Win32.Build.0 = Release|Win32
+		{9C5D1592-E6CA-44D1-8473-62F8E8DF4F26}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C5D1592-E6CA-44D1-8473-62F8E8DF4F26}.Debug|Win32.Build.0 = Debug|Win32
+		{9C5D1592-E6CA-44D1-8473-62F8E8DF4F26}.Release|Win32.ActiveCfg = Release|Win32
+		{9C5D1592-E6CA-44D1-8473-62F8E8DF4F26}.Release|Win32.Build.0 = Release|Win32
+		{73C944D9-EEE9-4D66-B373-6070D052D728}.Debug|Win32.ActiveCfg = Debug|Win32
+		{73C944D9-EEE9-4D66-B373-6070D052D728}.Debug|Win32.Build.0 = Debug|Win32
+		{73C944D9-EEE9-4D66-B373-6070D052D728}.Release|Win32.ActiveCfg = Release|Win32
+		{73C944D9-EEE9-4D66-B373-6070D052D728}.Release|Win32.Build.0 = Release|Win32
+		{86A42FF0-4ACE-4577-B4B8-9CD5AC6B9049}.Debug|Win32.ActiveCfg = Debug|Win32
+		{86A42FF0-4ACE-4577-B4B8-9CD5AC6B9049}.Debug|Win32.Build.0 = Debug|Win32
+		{86A42FF0-4ACE-4577-B4B8-9CD5AC6B9049}.Release|Win32.ActiveCfg = Release|Win32
+		{86A42FF0-4ACE-4577-B4B8-9CD5AC6B9049}.Release|Win32.Build.0 = Release|Win32
+		{AF8EF4DF-8BBE-47CC-8BAF-1B679AC284A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AF8EF4DF-8BBE-47CC-8BAF-1B679AC284A9}.Debug|Win32.Build.0 = Debug|Win32
+		{AF8EF4DF-8BBE-47CC-8BAF-1B679AC284A9}.Release|Win32.ActiveCfg = Release|Win32
+		{AF8EF4DF-8BBE-47CC-8BAF-1B679AC284A9}.Release|Win32.Build.0 = Release|Win32
+		{5D34AE0B-7D63-445D-88EB-FED18F4DD078}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5D34AE0B-7D63-445D-88EB-FED18F4DD078}.Debug|Win32.Build.0 = Debug|Win32
+		{5D34AE0B-7D63-445D-88EB-FED18F4DD078}.Release|Win32.ActiveCfg = Release|Win32
+		{5D34AE0B-7D63-445D-88EB-FED18F4DD078}.Release|Win32.Build.0 = Release|Win32
+		{FE38C0F0-0268-4274-AE57-B40AB16060F8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FE38C0F0-0268-4274-AE57-B40AB16060F8}.Debug|Win32.Build.0 = Debug|Win32
+		{FE38C0F0-0268-4274-AE57-B40AB16060F8}.Release|Win32.ActiveCfg = Release|Win32
+		{FE38C0F0-0268-4274-AE57-B40AB16060F8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

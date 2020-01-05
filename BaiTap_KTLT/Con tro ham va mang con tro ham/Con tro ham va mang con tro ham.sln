@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DEMO 01", "DEMO 01\DEMO 01.vcxproj", "{B96854B7-140C-4828-8317-074CF233CF9A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tìm max, min trong mang dong 1 chieu", "Tìm max, min trong mang dong 1 chieu\Tìm max, min trong mang dong 1 chieu.vcxproj", "{56816B8A-422F-4F70-AE8C-E281C52ABAEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B96854B7-140C-4828-8317-074CF233CF9A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B96854B7-140C-4828-8317-074CF233CF9A}.Debug|Win32.Build.0 = Debug|Win32
+		{B96854B7-140C-4828-8317-074CF233CF9A}.Release|Win32.ActiveCfg = Release|Win32
+		{B96854B7-140C-4828-8317-074CF233CF9A}.Release|Win32.Build.0 = Release|Win32
+		{56816B8A-422F-4F70-AE8C-E281C52ABAEC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{56816B8A-422F-4F70-AE8C-E281C52ABAEC}.Debug|Win32.Build.0 = Debug|Win32
+		{56816B8A-422F-4F70-AE8C-E281C52ABAEC}.Release|Win32.ActiveCfg = Release|Win32
+		{56816B8A-422F-4F70-AE8C-E281C52ABAEC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

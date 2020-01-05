@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo 1", "Demo 1\Demo 1.vcxproj", "{32DA02CA-7804-45B0-8D2F-EB40C7AEE999}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Toan tu gan", "Toan tu gan\Toan tu gan.vcxproj", "{767EF742-CEAD-419F-AED1-02B66CA5250F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cau lenh don, cau lenh phuc", "Cau lenh don, cau lenh phuc\Cau lenh don, cau lenh phuc.vcxproj", "{EFAEAE49-436D-4DE0-81C7-37185820D8CC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Nhap xuat", "Nhap xuat\Nhap xuat.vcxproj", "{58B4B72C-FD98-4925-A5C4-594862C080F1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Thu vien math", "Thu vien math\Thu vien math.vcxproj", "{C093889C-11A7-415B-9BFC-21568C10C256}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bai tap cac kieu du lieu co so", "Bai tap cac kieu du lieu co so\Bai tap cac kieu du lieu co so.vcxproj", "{9284919F-4E84-49A3-8F98-9919100F911C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Xuất mã ASCII", "Xuất mã ASCII\Xuất mã ASCII.vcxproj", "{6204C445-62C9-48C2-B026-814A10B16BEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32DA02CA-7804-45B0-8D2F-EB40C7AEE999}.Debug|Win32.ActiveCfg = Debug|Win32
+		{32DA02CA-7804-45B0-8D2F-EB40C7AEE999}.Debug|Win32.Build.0 = Debug|Win32
+		{32DA02CA-7804-45B0-8D2F-EB40C7AEE999}.Release|Win32.ActiveCfg = Release|Win32
+		{32DA02CA-7804-45B0-8D2F-EB40C7AEE999}.Release|Win32.Build.0 = Release|Win32
+		{767EF742-CEAD-419F-AED1-02B66CA5250F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{767EF742-CEAD-419F-AED1-02B66CA5250F}.Debug|Win32.Build.0 = Debug|Win32
+		{767EF742-CEAD-419F-AED1-02B66CA5250F}.Release|Win32.ActiveCfg = Release|Win32
+		{767EF742-CEAD-419F-AED1-02B66CA5250F}.Release|Win32.Build.0 = Release|Win32
+		{EFAEAE49-436D-4DE0-81C7-37185820D8CC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EFAEAE49-436D-4DE0-81C7-37185820D8CC}.Debug|Win32.Build.0 = Debug|Win32
+		{EFAEAE49-436D-4DE0-81C7-37185820D8CC}.Release|Win32.ActiveCfg = Release|Win32
+		{EFAEAE49-436D-4DE0-81C7-37185820D8CC}.Release|Win32.Build.0 = Release|Win32
+		{58B4B72C-FD98-4925-A5C4-594862C080F1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{58B4B72C-FD98-4925-A5C4-594862C080F1}.Debug|Win32.Build.0 = Debug|Win32
+		{58B4B72C-FD98-4925-A5C4-594862C080F1}.Release|Win32.ActiveCfg = Release|Win32
+		{58B4B72C-FD98-4925-A5C4-594862C080F1}.Release|Win32.Build.0 = Release|Win32
+		{C093889C-11A7-415B-9BFC-21568C10C256}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C093889C-11A7-415B-9BFC-21568C10C256}.Debug|Win32.Build.0 = Debug|Win32
+		{C093889C-11A7-415B-9BFC-21568C10C256}.Release|Win32.ActiveCfg = Release|Win32
+		{C093889C-11A7-415B-9BFC-21568C10C256}.Release|Win32.Build.0 = Release|Win32
+		{9284919F-4E84-49A3-8F98-9919100F911C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9284919F-4E84-49A3-8F98-9919100F911C}.Debug|Win32.Build.0 = Debug|Win32
+		{9284919F-4E84-49A3-8F98-9919100F911C}.Release|Win32.ActiveCfg = Release|Win32
+		{9284919F-4E84-49A3-8F98-9919100F911C}.Release|Win32.Build.0 = Release|Win32
+		{6204C445-62C9-48C2-B026-814A10B16BEB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6204C445-62C9-48C2-B026-814A10B16BEB}.Debug|Win32.Build.0 = Debug|Win32
+		{6204C445-62C9-48C2-B026-814A10B16BEB}.Release|Win32.ActiveCfg = Release|Win32
+		{6204C445-62C9-48C2-B026-814A10B16BEB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
