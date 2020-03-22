@@ -1,0 +1,111 @@
+SELF-INTRODUCATIO
+
+----
+Agenda
++ Personal infomation
++ Education background
++ Working experience
++ Reccent projects in charge
++ plan after joining LG
+
+---
+Personal infomation: 
+- Name:
+- Date of birth:
+- Address:
+
+---
+Education
++ 2010 - 2015 : Hanoi University of Science and technolory
++ Electronic and telecommunication
++ Talented Engineer class
+
+---
+Working experience
++ 3/2017 - 4/2018 : FPT software
+  - software developer
+  - automotive (C++, Qt)
++ 11/2015 - 11/2016:
+  - internship
+  - android  & java
+
+----
+Reccent projects incharge
+- Electronic kiosk system
++ linux
++ C++, Qt
+- IKC300
++ linux
++ C++
+-HUD3D
++ window
++ C++
+
+----
+Plan after joining LG
+-Improve skill
++ programming : c/c++, Qt, Android
++ Communication
++ leadership
+- Become a team leader
+
+
+
+==========================
+- con trỏ là gì
+- cấp phát động trong c(malloc, calloc) và c++(new)
+- khác nhau malloc and calloc
+- dùng hàm gì để khởi tạo giá trị các ô nhớ sau khi dùng malloc
+- thu hồi bộ nhớ c(free), c++ (delete)
+- 4 tính chất hướng đối tượng c++ là gì?
+- cho 1 ví dụ về tính đa hình
+- overload, override khác nhau như nào
+- khi nào xảy ra memory leak
+- vì sao destructor của class cha nên khai báo virtual
+- truyền tham trỏ, tham trị, tham chiếu khác nhau như nào, khi nào dùng loại nào
+- kích thước struct tính như nào, alignment memory là gì
+- khác nhau struct và union
+- array và list khác nhau như nào
+- vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó
+- multi thread và multi process khác nhau như nào
+- khi dùng multi thread phải chú ý gì
+- dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread
+- pure virtual khai báo như nào, có đặc điểm gì
+- guard header file là gì,tại sao cần guard header
+- khi nào dùng friend class
+- dll và lib khác nhau như nào
+
+- smart pointer && overload operator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
