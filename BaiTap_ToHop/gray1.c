@@ -1,5 +1,5 @@
 /*
-    sinh cac tap con cua tap n phan tu bang thuat toan gray (de quy)
+  sinh cac tap con cua tap n phan tu bang thuat toan gray (de quy)
 */
 
 #include<stdio.h>

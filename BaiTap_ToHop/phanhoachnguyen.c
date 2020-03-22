@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 void bangphanhoach(int a[][100], int n){
      int i,j;
      a[0][0]=1;
@@ -13,6 +14,7 @@ void bangphanhoach(int a[][100], int n){
          
      }
 }
+
 void partition(int a[], int i, int v){
      if(v==0){
               int j;
@@ -32,6 +34,7 @@ void partition(int a[], int i, int v){
           }
      }
 }
+
 void in(int a[][100], int n){
      int i,j;
      for(i=1;i<n;i++)
@@ -43,6 +46,7 @@ void in(int a[][100], int n){
          printf("\n");
      }
 }
+
 int main(){
     int a[100][100], b[100], n,i,j;
     
