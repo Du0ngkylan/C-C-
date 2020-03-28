@@ -1,11 +1,4 @@
 /*
- * fibonacciLimQuotient.c
- *
- *  Created on: Aug 13, 2013
- *      Author: BlueWhale
- */
-
-/*
  * Yeu cau: so Fibonacci thoa man tinh chat sau:
  * lim(n->oo) F_(n+1)/F_n = phi, voi phi = (1+sqrt(5))/2.
  * tinh chat tren tuong duong voi cong thuc sau:
@@ -81,8 +74,6 @@ void kiemTra() {
 }
 
 int main() {
-	setbuf(stdout, NULL);
-
 	phi = (1+sqrt(5.0))/2;
 	nhap();
 	printf("So N nho nhat thoa man la %d", timNNhoNhat(epsilon));

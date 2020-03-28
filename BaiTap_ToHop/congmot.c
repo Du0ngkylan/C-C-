@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 void nhap(int a[], int b[], int n){
      int i;
      for(i=0;i<n;i++)
@@ -8,46 +9,43 @@ void nhap(int a[], int b[], int n){
          b[i]=0;
      }
 }
+
 void printSubset(int a[], int b[], int n){
-     int i;
-     printf("{");
-     for(i=0;i<n;i++)
-     {
-         if(b[i]==1)
-         {
-              printf("%d", a[i]);
-         }
-     }
-     printf("}\n");
+    printf("{");
+    for(int i = 0; i < n; i++) {
+        if(b[i]==1) {
+            printf("%d", a[i]);
+        }
+    }
+    printf("}\n");
 }
+
 void nextSubset(int a[], int n){
-     int j=n-1;
-     while(j>=0){
-           if(a[j]==1)
-           {
-                a[j]=0;
-           }else{
-                 a[j]=1;
-                 break;
-           }
-           j--;
-     }
+    int j = n-1;
+    while(j >= 0){
+        if(a[j] == 1) {
+             a[j] = 0;
+        } else{
+              a[j] = 1;
+              break;
+        }
+        j--;
+    }
 }
+
 void enumerate(int a[], int b[], int n){
-     int i,j;
-     unsigned long max = pow( 2,n);
-     
-     for(j=0;j<n;j++)
-     {
-         b[j]=0;
-     }
-     
-     for(i=0;i<max;i++)
-     {
-         printSubset(a,b,n);
-         nextSubset(b,n);
-     }
+
+    unsigned long max = pow(2, n);
+    for(int j = 0; j < n; j++) {
+        b[j] = 0;
+    }
+    
+    for(int i = 0; i < max; i++) {
+        printSubset(a,b,n);
+        nextSubset(b,n);
+    }
 }
+
 int main(){
     int a[100], b[100], n;
     printf("nhap n:");
@@ -56,7 +54,5 @@ int main(){
     nhap(a,b,n);
     printf("cac tap con sinh ra la:\n");
     enumerate(a,b,n);
-    
-    getch();
     return 0;
 }

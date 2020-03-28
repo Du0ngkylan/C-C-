@@ -1,10 +1,3 @@
-/*
- * dayDoiXung.c
- *
- *  Created on: Aug 13, 2013
- *      Author: BlueWhale
- */
-
 /* Yeu cau nhap mot day co do dai n
  * va kiem tra xem day do co phai la doi xung hay khong
  */
@@ -45,12 +38,12 @@ void swap(int * a, int * b) {
 
 //Kiem tra xem day co doi xung, neu co thi sap xep lai thanh day doi xung
 void kiemTra() {
-	int i, j;
+
 	if (n % 2 == 0) { //Truong hop so phan tu cua mang la so le
 		//Sap cac phan tu theo tung cap doi xung nhau hai ben thoa man: a[i]=a[n-1-i]
-		for (i = 0; i < n / 2; i++) {
+		for (int i = 0; i < n / 2; i++) {
 			if (a[i] != a[n - 1 - i]) {
-				j = i + 1;
+				int j = i + 1;
 				while ((j <= n - 2 - i) && (a[j] != a[i])) {
 					j++;
 				}
@@ -65,11 +58,11 @@ void kiemTra() {
 	} else { //Truong hop so phan tu cua mang la so chan
 		//Sap phan tu o giua
 		int soLanLap = 0;
-		i = 0;
+		int i = 0;
 		//Tim phan tu dau tien co so lan lap le
 		while ((soLanLap % 2 == 0) && (i < n)){
 			soLanLap = 0;
-			for (j = 0; j < n; j++) {
+			for (int j = 0; j < n; j++) {
 				if (a[j] == a[i]) {
 					soLanLap++;
 				}
@@ -80,10 +73,11 @@ void kiemTra() {
 		if (soLanLap %2 == 1) {
 			swap(&a[i-1], &a[n / 2]);
 		}
+
 		//Sap cac phan tu theo tung cap doi xung nhau hai ben thoa man: a[i]=a[n-1-i]
-		for (i = 0; i < n / 2; i++) {
+		for (int i = 0; i < n / 2; i++) {
 			if (a[i] != a[n - 1 - i]) {
-				j = i + 1;
+				int j = i + 1;
 				while ((j <= n - 2 - i) && (a[j] != a[i])) {
 					j++;
 					if (j == (n/2)) {
@@ -106,7 +100,6 @@ void kiemTra() {
 }
 
 int main() {
-	setbuf(stdout, NULL);
 
 	nhap();
 	printf("Day vua nhap la: ");

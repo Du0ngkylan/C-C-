@@ -1,11 +1,4 @@
 /*
- * timNghiemNhiPhan.c
- *
- *  Created on: Aug 13, 2013
- *      Author: BlueWhale
- */
-
-/*
  * Cho phuong trinh sau: f(x) = x^4+3*x^3+x-6 = 0
  * Hay tim nghiem cua phuong trinh tren doan [a,b] voi a,b nhap tu ban phim
  * thoa man |f(x)| < epsilon voi
@@ -21,7 +14,7 @@ float a, b; //Khoang tim nghiem [a, b]
 
 //Ham tinh f(x) = x^4+3*x^3+x-6
 float tinh_f(float x) {
-	return (x * x * x * x + 3 * x * x * x + x - 6 );
+	return (x * x * x * x + 3 * x * x * x + x - 6);
 }
 
 //Ham nhap epsilon, a, b
@@ -58,12 +51,9 @@ float timNghiem(float a, float b){
 		}
 	}
 	return mid;
-
 }
 
 int main() {
-	setbuf(stdout, NULL);
-
 	nhap();
 	printf("Nghiem cua bai toan la %f", timNghiem(a, b));
 	getch();

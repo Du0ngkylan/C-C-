@@ -1,11 +1,4 @@
 /*
- * timDuongDi.c
- *
- *  Created on: Aug 14, 2013
- *      Author: BlueWhale
- */
-
-/*
  * Tim so duong di tu o tren cung goc ben trai den o duoi cung goc ben phai
  * trong mot hinh chu nhat co kich thuoc nxm
  */
@@ -30,8 +23,6 @@ void doDuong(int i, int j) {
 }
 
 int main() {
-	setbuf(stdout, NULL);
-
 	//Nhap kich thuoc cua hinh chu nhat
 	printf("n = ");
 	scanf("%d", &n);

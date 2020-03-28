@@ -1,11 +1,4 @@
 /*
- * binaryTree.c
- *
- *  Created on: Aug 11, 2013
- *      Author: BlueWhale
- */
-
-/*
  * Tao cau truc cay nhi phan tim kiem
  * 1/ Nhap mot so nguyen vao va tim xem co nut nao chua so nguyen do hay khong?
  * 2/ Nhap 2 so nguyen p va q va kiem tra xem p co phai la to tien cua q hay kong?
@@ -133,8 +126,6 @@ void countDescendant(int * count, Tree tree) {
 }
 
 int main() {
-	setbuf(stdout, NULL);
-
 	inputData();
 	createTree(&root);
 	preOrder(root);
@@ -177,8 +168,6 @@ int main() {
 	} else {
 		printf("\n %d khong co trong cay", p);
 	}
-
-
 	return 0;
 }
 
