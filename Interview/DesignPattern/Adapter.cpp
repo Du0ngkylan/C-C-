@@ -46,7 +46,6 @@ public:
 	}
 };
 
-
 int main() {
 	//  người Việt sẽ là Client trong ví dụ này,vì anh ta cần gửi một số message cho người Nhật.
 	JapaneseAdaptee *adaptee = new JapaneseAdaptee();
