@@ -1,10 +1,15 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <set>
 using namespace std;
 
 int main() {
 	vector<int> input = { 1, 1, 2, 3, 5, 5, 7, 9, 9, 9 };
-	vector<int> reg(input.size(), 0);
+	
+	set<int> setArr(input.begin(), input.end()); // { 1, 2, 3, 5, 7, 9 };
+	auto maxx = *max_element(setArr.begin(), setArr.end()); // maxx = 9
+	vector<int> reg(maxx + 1, 0);
 	for (auto it : input) {
 		reg[it] = 1;
 	}
