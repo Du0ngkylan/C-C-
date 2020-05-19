@@ -30,18 +30,6 @@ Working experience
   - android  & java
 
 ----
-Reccent projects incharge
-- Electronic kiosk system
-+ linux
-+ C++, Qt
-- IKC300
-+ linux
-+ C++
--HUD3D
-+ window
-+ C++
-
-----
 Plan after joining LG
 -Improve skill
 + programming : c/c++, Qt, Android
@@ -49,33 +37,46 @@ Plan after joining LG
 + leadership
 - Become a team leader
 
-
-
 ==========================
-- con trỏ là gì
-- cấp phát động trong c(malloc, calloc) và c++(new)
-- khác nhau malloc and calloc
-- dùng hàm gì để khởi tạo giá trị các ô nhớ sau khi dùng malloc
-- thu hồi bộ nhớ c(free), c++ (delete)
-- 4 tính chất hướng đối tượng c++ là gì?
-- cho 1 ví dụ về tính đa hình
-- overload, override khác nhau như nào
-- khi nào xảy ra memory leak
-- vì sao destructor của class cha nên khai báo virtual
-- truyền tham trỏ, tham trị, tham chiếu khác nhau như nào, khi nào dùng loại nào
-- kích thước struct tính như nào, alignment memory là gì
-- khác nhau struct và union
-- array và list khác nhau như nào
-- vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó
-- multi thread và multi process khác nhau như nào
-- khi dùng multi thread phải chú ý gì
-- dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread
-- pure virtual khai báo như nào, có đặc điểm gì
-- guard header file là gì,tại sao cần guard header
-- khi nào dùng friend class
-- dll và lib khác nhau như nào
+1, con trỏ là gì?
+ - Là một biến được dùng để lưu trữ địa chỉ của biến khác.
+ - khai báo: <data_type> *<name_of_pointer>;
+ ví dụ:
+  int *ptr; //declare an int pointer
+  int value = 5;
 
-- smart pointer && overload operator
+  ptr = &value; //ptr point to value
+
+  cout << &value << endl; //print the address of value
+  cout << ptr << endl;    //print the address of value which is held in ptr
+
+  cout << value << endl;  //print the content of value
+  cout << *(&value) << endl; //print the content of value
+  cout << *ptr << endl;	//print the content of value
+
+2, cấp phát động trong c(malloc, calloc) và c++(new)
+
+3, khác nhau malloc and calloc
+4, dùng hàm gì để khởi tạo giá trị các ô nhớ sau khi dùng malloc
+5, thu hồi bộ nhớ c(free), c++ (delete)
+6, 4 tính chất hướng đối tượng c++ là gì?
+7, cho 1 ví dụ về tính đa hình
+8, overload, override khác nhau như nào
+9, khi nào xảy ra memory leak
+10, vì sao destructor của class cha nên khai báo virtual
+11, truyền tham trỏ, tham trị, tham chiếu khác nhau như nào, khi nào dùng loại nào
+12, kích thước struct tính như nào, alignment memory là gì
+13, khác nhau struct và union
+14, array và list khác nhau như nào
+15, vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó
+16, multi thread và multi process khác nhau như nào
+17, khi dùng multi thread phải chú ý gì
+18, dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread
+19, pure virtual khai báo như nào, có đặc điểm gì
+20, guard header file là gì,tại sao cần guard header
+21, khi nào dùng friend class
+22, dll và lib khác nhau như nào
+23, smart pointer && overload operator
 
 
 
