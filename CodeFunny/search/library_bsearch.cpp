@@ -7,7 +7,22 @@
 // compare: Đây là hàm để so sánh hai phần tử.
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
+
+void Search() {
+    vector <int> v1 = {9,1,4,2,3};
+    vector <int> v2 = {3,1,2,5,1,4,7};
+
+    for(auto it1: v1) {
+        if (find(v2.begin(),v2.end(), it1) == v2.end()) {
+            cout << "not found" << endl;
+            break;
+        }
+    }
+    cout << "found" << endl;  
+}
 
 int comparator(const void *a, const void *b){
   return (*(int *)a - *(int *)b);
