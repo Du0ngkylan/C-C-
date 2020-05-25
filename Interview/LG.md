@@ -44,28 +44,30 @@ Plan after joining
  - khai báo: <data_type> *<name_of_pointer>;
  
  ví dụ:</br>
-  int *ptr; //declare an int pointer </br>
+ ```
+  int *ptr; //declare an int pointer
   
-  int value = 5;</br>
+  int value = 5;
   ptr = &value; //ptr point to value
 
-  cout << &value << endl; //print the address of value</br>
-  cout << ptr << endl;    //print the address of value which is held in ptr</br>
+  cout << &value << endl; //print the address of value
+  cout << ptr << endl;    //print the address of value which is held in ptr
 
-  cout << value << endl;  //print the content of value</br>
-  cout << *(&value) << endl; //print the content of value</br>
-  cout << *ptr << endl;	//print the content of value</br>
+  cout << value << endl;  //print the content of value
+  cout << *(&value) << endl; //print the content of value
+  cout << *ptr << endl;	//print the content of value
+ ```
  
 # 2, Cấp phát động trong c(malloc, calloc) và c++(new)
 
 Trong c:
 + malloc:
 ptr = (castType*) malloc(size);
-ví dụ: ptr = (int*) malloc(100 * sizeof(int));
+ví dụ: ```ptr = (int*) malloc(100 * sizeof(int));```
 
 + calloc:
 ptr = (castType*)calloc(n, size);
-ví dụ: ptr = (int*) calloc(100, sizeof(int));
+ví dụ: ```ptr = (int*) calloc(100, sizeof(int));```
 
 + realloc: thay đổi kích thước bộ nhớ đã được cấp phát trước đó
 ptr = realloc(ptr, n);
@@ -75,17 +77,37 @@ free(ptr); // ptr là con trỏ
 
 Trong C++
 + sử dụng toán tử new và giải phóng bộ nhớ sử dụng delete.
-ví dụ:
+ví dụ:</br>
+```
 float *ptr = new float[num];
 delete [] ptr;
+```
 
 3, khác nhau malloc and calloc?
+
+|               malloc()	              |                  calloc()                 |
+|:--------------------------------------|:------------------------------------------|
+|malloc viết tắt của memory allocation	| calloc viết tắt của contiguous allocation |
+|=======================================|===========================================|
+|malloc nhận 1 tham số truyền vào là số byte của vùng nhớ cần cấp phát   | calloc nhận 2 tham số truyền vào là số block và kích thước mỗi block (byte)      |
+|=======================================|===========================================|
+| void *malloc(size_t n);               | void *calloc(size_t n, size_t size);      |
+|=======================================|===========================================|
+|Hàm trả về con trỏ trỏ tới vùng nhớ nếu nếu cấp phát thành công, trả về NULL nếu cấp phát fail | Hàm trả về con trỏ trỏ tới vùng nhớ được cấp phát và vùng nhớ được khởi tạo bằng giá trị 0. Trả về NULL nếu cấp phát fail  |
+|=======================================|===========================================|
+|Hàm malloc() nhanh hơn hàm calloc()	  | Hàm calloc() tốn thêm thời gian khởi tạo vùng nhớ. Tuy nhiên, sự khác biệt này không đáng kể. 
+|=======================================|===========================================|
+
 
 4, dùng hàm gì để khởi tạo giá trị các ô nhớ sau khi dùng malloc?
 
 5, thu hồi bộ nhớ c(free), c++ (delete) ?
 
 6, 4 tính chất hướng đối tượng c++ là gì?
+- Tính trừu tượng(Abstraction)
+- Tính đóng gói (Encapsulation)
+- Tính kế thừa (Inheritance)
+- Tính đa hình (Polymorphism )
 
 7, cho 1 ví dụ về tính đa hình?
 
