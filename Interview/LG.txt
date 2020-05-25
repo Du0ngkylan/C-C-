@@ -126,7 +126,33 @@ typedef struct Struct2{
 };
 ---------> sizeof = 8
 
-14, array và list khác nhau như nào
+14, array(vector) và list khác nhau như nào?
+
+List là double linked list
+Vector là dynamic array, tức là array được cấp phát động bằng Allocator 92
+
+Khi nào nên dùng list và khi nào nên dùng vector?
+
+Nên mặc định sử dụng vector. Bởi vì phần lớn các trường hợp mình hay dùng là thêm phần tử vào cuối mảng và truy xuất random một phần từ nào đấy. Vector là array, việc thêm phần tử vào cuối mảng hay lấy một phần tử bất rất dễ dàng và nhanh.
+
+Khi náo ử dụng list?
+
+Khi ta cần thêm/xóa phần tử ở giữa mảng hoặc ở đầu mảng nhiều hơn so với việc thêm vào ở cuối. Và không có nhu cầu truy vấn random các phần tử một cách thường xuyên
+
+Ưu và nhược của chúng là gì?
+
+####Ưu của vector:
+Thêm vào cuối mảng nhanh, truy xuất phần tử nhanh vì mỗi phần tử đều có index.
+
+####Nhược của vector:
+Chèn phần tử chậm, cần một khoảng nhớ liên tiếp để chứa mảng. Khi hết chứa đủ mảng thì cần phải allocate/move 31 một mảng mới với số phần tử gấp đôi.
+
+####Ưu của list:
+Chèn phần tử, xóa phần tử nhanh, không cần một khoảng nhớ liên tiếp để chứa các phần tử vì nó là double linked list
+
+####Nhược của list:
+Truy xuất phần tử chậm vì các phần tử không có index thực, phải duyệt danh sách phần tử cho tới khi tới được phần tử cần.
+
 15, vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó
 16, multi thread và multi process khác nhau như nào
 17, khi dùng multi thread phải chú ý gì
@@ -134,8 +160,11 @@ typedef struct Struct2{
 19, pure virtual khai báo như nào, có đặc điểm gì?
 20, guard header file là gì,tại sao cần guard header
 21, khi nào dùng friend class
-22, dll và lib khác nhau như nào
+22, dll và lib khác nhau như nào?
 23, smart pointer && overload operator
+24, Link list
+25, Đệ Quy
+
 
 
 
