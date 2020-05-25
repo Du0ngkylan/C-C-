@@ -56,6 +56,27 @@ Plan after joining LG
 
 2, cấp phát động trong c(malloc, calloc) và c++(new)
 
+Trong c:
++ malloc:
+ptr = (castType*) malloc(size);
+ví dụ: ptr = (int*) malloc(100 * sizeof(int));
+
++ calloc:
+ptr = (castType*)calloc(n, size);
+ví dụ: ptr = (int*) calloc(100, sizeof(int));
+
++ realloc: thay đổi kích thước bộ nhớ đã được cấp phát trước đó
+ptr = realloc(ptr, n);
+
++ free:
+free(ptr); // ptr là con trỏ
+
+Trong C++
++ sử dụng toán tử new và giải phóng bộ nhớ sử dụng delete.
+ví dụ:
+float *ptr = new float[num];
+delete [] ptr;
+
 3, khác nhau malloc and calloc
 4, dùng hàm gì để khởi tạo giá trị các ô nhớ sau khi dùng malloc
 5, thu hồi bộ nhớ c(free), c++ (delete)
@@ -65,14 +86,52 @@ Plan after joining LG
 9, khi nào xảy ra memory leak
 10, vì sao destructor của class cha nên khai báo virtual
 11, truyền tham trỏ, tham trị, tham chiếu khác nhau như nào, khi nào dùng loại nào
-12, kích thước struct tính như nào, alignment memory là gì
-13, khác nhau struct và union
+12, kích thước struct tính như nào, alignment memory là gì ?
+- size của struct phải là tổng size của các thành phần bên trong nó.
+- Data Structure Alignment là gì?
++ Data alignment: sắp xếp data sao cho địa chỉ của các biến luôn là số chẵn và phù hợp với hệ thống.
++ Data padding: để làm được việc alignment như ở trên chúng ta cần phải “padding” thêm một số byte vào sau biến “char c” để khi đó biến “int i” có thể ở địa chỉ chẵn.
+
+ví dụ:
+struct padding {
+    char c1;
+    int i1;
+    char c2;
+    short s1;
+};
+===> sizeof = 12
+
+struct no_padding {
+    int i1;
+    char c1;
+    char c2;
+    short s1;
+};
+===> sizeof = 8
+
+13, khác nhau struct và union?
+- struct và union cơ bản giống nhau. Tuy nhiên, về mặt lưu trữ trong bộ nhớ, chúng có sự khác biệt rõ rệt như sau:
+ =>>> chỉ khác một điều union tận dụng tối đa vùng nhớ trống để lưu trữ kiểu dữ liệu. Còn struct thì không. 
+typedef union Struct1{
+    char a;
+    char b;
+    int c;
+};
+----------> sizeof = 4
+
+typedef struct Struct2{
+    char a;
+    char b;
+    int c;
+};
+---------> sizeof = 8
+
 14, array và list khác nhau như nào
 15, vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó
 16, multi thread và multi process khác nhau như nào
 17, khi dùng multi thread phải chú ý gì
 18, dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread
-19, pure virtual khai báo như nào, có đặc điểm gì
+19, pure virtual khai báo như nào, có đặc điểm gì?
 20, guard header file là gì,tại sao cần guard header
 21, khi nào dùng friend class
 22, dll và lib khác nhau như nào
