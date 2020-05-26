@@ -25,10 +25,6 @@ Working experience
 + 3/2017 - 4/2018 : FPT software
   - software developer
   - automotive (C++, Qt)
-+ 11/2015 - 11/2016:
-  - internship
-  - android  & java
-
 ----
 Plan after joining
 -Improve skill
@@ -115,7 +111,31 @@ delete [] ptr;
 
 9, khi nào xảy ra memory leak?
 
-10, vì sao destructor của class cha nên khai báo virtual?
+# 10, Vì sao destructor của class cha nên khai báo virtual?
+- Virtual destructor là một thứ rất quan trọng khi bạn làm việc với C++, nếu bạn có ý định cho phép kế thừa class mà bạn đang viết thì bạn bắt buộc phải thêm virtual destructor cho class đó, ngược lại thì bạn đang ngầm ám chỉ rằng class của bạn không cho phép kế thừa. Điều này tương đương với từ khoá final trong Java. Nếu bạn thấy một class không có virtual destructor, đơn giản là đừng có kế thừa nó, vì nó đi không đúng với ý định của người viết ra class, và có thể gây ra thiệt hại hệ thống nếu bạn cố tình bỏ qua.</br>
+ví dụ:
+```
+class Animal {
+public:
+    virtual ~Animal(){printf("This is Animal's destructor\n");};
+}; 
+
+class Cat : public Animal {
+public:
+    ~Cat(){printf("This is Cat's destructor\n");};
+};
+
+int main() {
+    Animal* tom = new Cat();
+    delete tom;
+}
+
+```
+output:</br>
+```
+This is Cat's destructor
+This is Animal's destructor
+```
 
 11, truyền tham trỏ, tham trị, tham chiếu khác nhau như nào, khi nào dùng loại nào?
 
@@ -127,20 +147,23 @@ delete [] ptr;
 + Data padding: để làm được việc alignment như ở trên chúng ta cần phải “padding” thêm một số byte vào sau biến “char c” để khi đó biến “int i” có thể ở địa chỉ chẵn.
 
 ví dụ:
+```
 struct padding {
     char c1;
     int i1;
     char c2;
     short s1;
 };
+```
 ===> sizeof = 12
-
+```
 struct no_padding {
     int i1;
     char c1;
     char c2;
     short s1;
 };
+```
 ===> sizeof = 8
 
 13, khác nhau struct và union?
@@ -217,7 +240,36 @@ Truy xuất phần tử chậm vì các phần tử không có index thực, ph�
 - Tuy nhiên, #pragma once không phải là thành phần chính thức trong C++, không phải compiler nào cũng hổ trợ.
 - Nên sử dụng header guard thay vì #pragma once
 
-21, khi nào dùng friend class?
+# 21, Khi nào dùng friend class?
+Mục đích:
+- Friend được xây dựng để khắc phục điểm yếu lớp dẫn xuất không thể truy cập tới các biến private của lớp cơ sở.
+
+Định nghĩa:
+- Một friend có thể là một hàm, một mẫu hàm, hoặc hàm thành viên, hoặc một lớp hoặc một mẫu lớp, trong trường hợp này, toàn bộ lớp và tất cả thành viên của nó là friend.
+- Hàm friend trong C++ của một lớp được định nghĩa bên ngoài phạm vi lớp đó, nhưng nó có quyền truy cập tất cả thành viên private và protected của lớp đó. Ngay cả khi các nguyên mẫu cho hàm friend xuất hiện trong định nghĩa lớp, thì các hàm friend không là các hàm thành viên.</br>
+Tính chất:
+- Friend của một class có thể là thành viên của 1 class khác
+- Friend của 1 class có thể là thành viên của class khác hoặc tất cả các class trong cùng 1 chương trình. Như là 1 GLOBAL FRIEND
+- Friend có thể access private hoặc protected của class được khai báo là Friend.
+- Friends không phải là một thành viên vì vậy không có con trỏ “this”
+- Friend có thể khai báo ở bất cứ đâu ( public, protected or private section) trong một class.
+Khai báo
+- Để khai báo một hàm dạng hàm friend của một lớp, đặt trước nguyên mẫu hàm đó trong định nghĩa lớp với từ khóa friend trong C++, như sau:
+```
+class Person {
+private:
+   string name;
+public:
+   friend void DisplayName( Person person); //hàmhiển thị tên
+   void setName( string name );
+};
+```
+- Để khai báo tất cả hàm thành viên của lớp Employee là dạng friend của lớp Person, đặt một khai báo sau trong định nghĩa của lớp Person:
+```
+class Person {
+   friend class Employee; // Employee là friend của person
+};
+```
 
 22, dll và lib khác nhau như nào?
 
