@@ -35,7 +35,7 @@ Plan after joining
 
 ----
 
-# 1, Con trỏ là gì?
+### 1, Con trỏ là gì?
  - Là một biến được dùng để lưu trữ địa chỉ của biến khác.
  - khai báo: <data_type> *<name_of_pointer>;
  
@@ -54,7 +54,7 @@ Plan after joining
   cout << *ptr << endl;	//print the content of value
  ```
  
-# 2, Cấp phát động trong c(malloc, calloc) và c++(new)
+### 2, Cấp phát động trong c(malloc, calloc) và c++(new)
 
 Trong c:
 + malloc:
@@ -79,7 +79,7 @@ float *ptr = new float[num];
 delete [] ptr;
 ```
 
-3, khác nhau malloc and calloc?
+### 3, khác nhau malloc and calloc?
 
 |               malloc()	              |                  calloc()                 |
 |:--------------------------------------|:------------------------------------------|
@@ -95,23 +95,23 @@ delete [] ptr;
 |=======================================|===========================================|
 
 
-4, dùng hàm gì để khởi tạo giá trị các ô nhớ sau khi dùng malloc?
+### 4, dùng hàm gì để khởi tạo giá trị các ô nhớ sau khi dùng malloc?
 
-5, thu hồi bộ nhớ c(free), c++ (delete) ?
+### 5, thu hồi bộ nhớ c(free), c++ (delete) ?
 
-6, 4 tính chất hướng đối tượng c++ là gì?
+### 6, 4 tính chất hướng đối tượng c++ là gì?
 - Tính trừu tượng(Abstraction)
 - Tính đóng gói (Encapsulation)
 - Tính kế thừa (Inheritance)
 - Tính đa hình (Polymorphism )
 
-7, cho 1 ví dụ về tính đa hình?
+### 7, cho 1 ví dụ về tính đa hình?
 
-8, overload, override khác nhau như nào?
+### 8, overload, override khác nhau như nào?
 
-9, khi nào xảy ra memory leak?
+### 9, khi nào xảy ra memory leak?
 
-# 10, Vì sao destructor của class cha nên khai báo virtual?
+### 10, Vì sao destructor của class cha nên khai báo virtual?
 - Virtual destructor là một thứ rất quan trọng khi bạn làm việc với C++, nếu bạn có ý định cho phép kế thừa class mà bạn đang viết thì bạn bắt buộc phải thêm virtual destructor cho class đó, ngược lại thì bạn đang ngầm ám chỉ rằng class của bạn không cho phép kế thừa. Điều này tương đương với từ khoá final trong Java. Nếu bạn thấy một class không có virtual destructor, đơn giản là đừng có kế thừa nó, vì nó đi không đúng với ý định của người viết ra class, và có thể gây ra thiệt hại hệ thống nếu bạn cố tình bỏ qua.</br>
 ví dụ:
 ```
@@ -137,9 +137,9 @@ This is Cat's destructor
 This is Animal's destructor
 ```
 
-11, truyền tham trỏ, tham trị, tham chiếu khác nhau như nào, khi nào dùng loại nào?
+### 11, truyền tham trỏ, tham trị, tham chiếu khác nhau như nào, khi nào dùng loại nào?
 
-12, kích thước struct tính như nào, alignment memory là gì ?
+### 12, kích thước struct tính như nào, alignment memory là gì ?
 
 - size của struct phải là tổng size của các thành phần bên trong nó.
 - Data Structure Alignment là gì?
@@ -166,7 +166,7 @@ struct no_padding {
 ```
 ===> sizeof = 8
 
-13, khác nhau struct và union?
+### 13, khác nhau struct và union?
 - struct và union cơ bản giống nhau. Tuy nhiên, về mặt lưu trữ trong bộ nhớ, chúng có sự khác biệt rõ rệt như sau:
  =>>> chỉ khác một điều union tận dụng tối đa vùng nhớ trống để lưu trữ kiểu dữ liệu. Còn struct thì không.
  ```
@@ -186,7 +186,7 @@ typedef struct Struct2{
 ```
 ---------> sizeof = 8
 
-14, array(vector) và list khác nhau như nào?
+### 14, array(vector) và list khác nhau như nào?
 
 - List là double linked list
 - Vector là dynamic array, tức là array được cấp phát động bằng Allocator
@@ -213,9 +213,9 @@ Chèn phần tử, xóa phần tử nhanh, không cần một khoảng nhớ li�
 ####Nhược của list:
 Truy xuất phần tử chậm vì các phần tử không có index thực, phải duyệt danh sách phần tử cho tới khi tới được phần tử cần.
 
-15, vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó?
+### 15, vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó?
 
-16, multi thread và multi process khác nhau như nào?
+### 16, multi thread và multi process khác nhau như nào?
 - Điểm quan trọng nhất cần chú ý là một thread có thể làm bất cứ nhiệm vụ gì một process có thể làm. Tuy nhiên, vì một process có thể chứa nhiều thread, mỗi thread có thể coi như là một process nhỏ. Vậy, điểm khác biệt mấu chốt giữa thread và process là công việc mỗi cái thường phải làm. 
 
 - Một điểm khác biệt nữa đó là nhiều thread nằm trong cùng một process dùng một không gian bộ nhớ giống nhau, trong khi process thì không. Điều này cho phép các thread đọc và viết cùng một kiểu cấu trúc và dữ liệu, giao tiếp dễ dàng giữa các thread với nhau. Giao thức giữa các process, hay còn gọi là IPC (inter-process communication) thì tương đối phức tạp bởi các dữ liệu có tính tập trung sâu hơn.
@@ -228,11 +228,11 @@ Sau đây là bảng tổng kết sự khác nhau giữa thread và process:
 - Các process chạy độc lập với nhau. Các thread thì sử dụng chung các địa chỉ nhớ liên kết với nhau, vì thế cần thận trọng tránh việc thread này nhảy sang thread khác. (Điều đã được nhắc đến trong ý thứ 2 vừa trên)
 - Một process có thể chứa nhiều thread. 
 
-17, khi dùng multi thread phải chú ý gì?
+### 17, khi dùng multi thread phải chú ý gì?
 
-18, dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread?
+### 18, dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread?
 
-19, Pure virtual khai báo như nào, có đặc điểm gì?
+### 19, Pure virtual khai báo như nào, có đặc điểm gì?
 - Hàm ảo thuần túy là một hàm ảo trong C ++ mà chúng ta không cần phải viết bất kỳ định nghĩa hàm nào và chỉ chúng ta phải khai báo nó. Nó được khai báo bằng cách gán 0 trong khai báo.
 
 - Abstract class có thể có các hàm và biến thông thường cùng với một hàm thuần ảo.
@@ -245,13 +245,13 @@ Sau đây là bảng tổng kết sự khác nhau giữa thread và process:
 
 - Chúng ta có thể tạo đối tượng của Abstract class khi chúng tôi dành một vị trí cho một hàm thuần ảo trong Vtable, nhưng chúng ta không đặt bất kỳ địa chỉ nào, vì vậy Vtable sẽ không đầy đủ.
 
-20, guard header file là gì,tại sao cần guard header?
+### 20, guard header file là gì,tại sao cần guard header?
 - Header guard (hay còn gọi là inlcude guard) là một phương pháp cực kì đơn giản để tránh việc include header file 2 lần trong một file source.
 - Hiện nay rất nhiều compiler hổ trợ #pragma once, và nó có mục đích tương tự như header guard.
 - Tuy nhiên, #pragma once không phải là thành phần chính thức trong C++, không phải compiler nào cũng hổ trợ.
 - Nên sử dụng header guard thay vì #pragma once
 
-# 21, Khi nào dùng friend class?
+### 21, Khi nào dùng friend class?
 Mục đích:
 - Friend được xây dựng để khắc phục điểm yếu lớp dẫn xuất không thể truy cập tới các biến private của lớp cơ sở.
 
@@ -283,7 +283,7 @@ class Person {
 };
 ```
 
-# 22, dll và lib khác nhau như nào?
+### 22, dll và lib khác nhau như nào?
 – Dynamic Link library (.dll, .so, .dylib) : chứa mã nhị phân, là ngôn ngữ bậc thấp của hệ điều hành, do đó chúng ta không thể mở nó ra như mở file text được.Các chương trình (hay các file .exe) có sử dụng đến thư viện liên kết động sẽ đọc code trong các file .dll (hay .so trên linux…) này để sử dụng trong quá trình chạy.
  
 – Static library (.lib, .a): chứa mã nhị phân, chúng được các chương trình gọi tới trong quá trình biên dịch,  bây giờ code trong file .exe của bạn sẽ bao gồm code của cả file thư viện.
@@ -295,10 +295,10 @@ class Person {
 - Thư viện liên kết tĩnh thì ngược lại, chúng sẽ làm cho chương trình của bạn phình to ra do phải copy code trong thư viện vào code của chính nó.
 - chương trình của bạn sẽ chạy rất nhanh, bởi vì chúng không mất thời gian mở các file .dll ra để đọc code, chúng đã có sẵn code trong RAM cùng với code của mình rồi.
 
-# 23, smart pointer && overload operator?
+### 23, smart pointer && overload operator?
 
-24, Linked Lists?
+### 24, Linked Lists?
 
-25, Stack, queue, heap.
+### 25, Stack, queue, heap.
 
-26, Đệ Quy?
+### 26, Đệ Quy?
