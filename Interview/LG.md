@@ -96,8 +96,15 @@ delete [] ptr;
 
 
 ### 4, dùng hàm gì để khởi tạo giá trị các ô nhớ sau khi dùng malloc?
+- Chúng ta có thể đạt được chức năng tương tự như calloc() bằng cách sử dụng malloc() theo sau là memset().
+```
+ptr = malloc(size); 
+memset(ptr, 0, size); 
+```
 
-### 5, thu hồi bộ nhớ c(free), c++ (delete) ?
+### 5, Vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó?
+- Thu hồi bộ nhớ c(free), c++ (delete): Nên check xem con trỏ khác null trước thi thực hiện xóa.
+- Đặt con trỏ thành 0 (là "null" hoặc nullptr trong C ++ tiêu chuẩn, NULL xác định từ C có phần khác nhau) để tránh sự cố khi xóa hai lần.
 
 ### 6, 4 tính chất hướng đối tượng c++ là gì?
 - Tính trừu tượng(Abstraction)
