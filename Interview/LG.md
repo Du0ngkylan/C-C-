@@ -216,6 +216,17 @@ Truy xuất phần tử chậm vì các phần tử không có index thực, ph�
 15, vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó?
 
 16, multi thread và multi process khác nhau như nào?
+- Điểm quan trọng nhất cần chú ý là một thread có thể làm bất cứ nhiệm vụ gì một process có thể làm. Tuy nhiên, vì một process có thể chứa nhiều thread, mỗi thread có thể coi như là một process nhỏ. Vậy, điểm khác biệt mấu chốt giữa thread và process là công việc mỗi cái thường phải làm. 
+
+- Một điểm khác biệt nữa đó là nhiều thread nằm trong cùng một process dùng một không gian bộ nhớ giống nhau, trong khi process thì không. Điều này cho phép các thread đọc và viết cùng một kiểu cấu trúc và dữ liệu, giao tiếp dễ dàng giữa các thread với nhau. Giao thức giữa các process, hay còn gọi là IPC (inter-process communication) thì tương đối phức tạp bởi các dữ liệu có tính tập trung sâu hơn.
+</br>
+Sau đây là bảng tổng kết sự khác nhau giữa thread và process:
+
+- Để tạo nhiều thread thì dễ dàng hơn so với process vì chúng không cần các địa chỉ nhớ riêng rẽ.
+- Việc chạy đa luồng cần được lập trình một cách chi tiết vì các thread chia sẻ các cấu trúc chung mà chỉ sử dụng được bởi từng thread vào mỗi thời điểm. Khác với thread, các process không dùng chung địa chỉ nhớ.
+- Thread được xếp hạng “nhẹ cân” bởi vì chúng sử dụng ít tài nguyên hơn so với các process.
+- Các process chạy độc lập với nhau. Các thread thì sử dụng chung các địa chỉ nhớ liên kết với nhau, vì thế cần thận trọng tránh việc thread này nhảy sang thread khác. (Điều đã được nhắc đến trong ý thứ 2 vừa trên)
+- Một process có thể chứa nhiều thread. 
 
 17, khi dùng multi thread phải chú ý gì?
 
@@ -247,6 +258,7 @@ Mục đích:
 Định nghĩa:
 - Một friend có thể là một hàm, một mẫu hàm, hoặc hàm thành viên, hoặc một lớp hoặc một mẫu lớp, trong trường hợp này, toàn bộ lớp và tất cả thành viên của nó là friend.
 - Hàm friend trong C++ của một lớp được định nghĩa bên ngoài phạm vi lớp đó, nhưng nó có quyền truy cập tất cả thành viên private và protected của lớp đó. Ngay cả khi các nguyên mẫu cho hàm friend xuất hiện trong định nghĩa lớp, thì các hàm friend không là các hàm thành viên.</br>
+
 Tính chất:
 - Friend của một class có thể là thành viên của 1 class khác
 - Friend của 1 class có thể là thành viên của class khác hoặc tất cả các class trong cùng 1 chương trình. Như là 1 GLOBAL FRIEND
@@ -271,9 +283,19 @@ class Person {
 };
 ```
 
-22, dll và lib khác nhau như nào?
+# 22, dll và lib khác nhau như nào?
+– Dynamic Link library (.dll, .so, .dylib) : chứa mã nhị phân, là ngôn ngữ bậc thấp của hệ điều hành, do đó chúng ta không thể mở nó ra như mở file text được.Các chương trình (hay các file .exe) có sử dụng đến thư viện liên kết động sẽ đọc code trong các file .dll (hay .so trên linux…) này để sử dụng trong quá trình chạy.
+ 
+– Static library (.lib, .a): chứa mã nhị phân, chúng được các chương trình gọi tới trong quá trình biên dịch,  bây giờ code trong file .exe của bạn sẽ bao gồm code của cả file thư viện.
 
-23, smart pointer && overload operator?
+- Thư viện liên kết động giảm thiểu số lượng code có trong chương trình của bạn, do đó chương trình bạn viết ra sẽ luôn gọn nhẹ hơn so với dùng thư viện liên kết tĩnh.
+- Thư viện liên kết động cho phép nhiều chương trình sử dụng nó một cách trực tiếp mà không cần phải biên dịch lại.
+- sử dụng thư viện liên kết động sẽ làm cho thời gian chạy chương trình lâu hơn do phải truy cập file, đọc file… từ đĩa cứng… vốn là công việc đòi hỏi thời gian.
+
+- Thư viện liên kết tĩnh thì ngược lại, chúng sẽ làm cho chương trình của bạn phình to ra do phải copy code trong thư viện vào code của chính nó.
+- chương trình của bạn sẽ chạy rất nhanh, bởi vì chúng không mất thời gian mở các file .dll ra để đọc code, chúng đã có sẵn code trong RAM cùng với code của mình rồi.
+
+# 23, smart pointer && overload operator?
 
 24, Linked Lists?
 
