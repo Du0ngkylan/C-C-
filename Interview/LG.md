@@ -145,25 +145,28 @@ struct no_padding {
 
 13, khác nhau struct và union?
 - struct và union cơ bản giống nhau. Tuy nhiên, về mặt lưu trữ trong bộ nhớ, chúng có sự khác biệt rõ rệt như sau:
- =>>> chỉ khác một điều union tận dụng tối đa vùng nhớ trống để lưu trữ kiểu dữ liệu. Còn struct thì không. 
+ =>>> chỉ khác một điều union tận dụng tối đa vùng nhớ trống để lưu trữ kiểu dữ liệu. Còn struct thì không.
+ ```
 typedef union Struct1{
     char a;
     char b;
     int c;
 };
+```
 ----------> sizeof = 4
-
+```
 typedef struct Struct2{
     char a;
     char b;
     int c;
 };
+```
 ---------> sizeof = 8
 
 14, array(vector) và list khác nhau như nào?
 
-List là double linked list
-Vector là dynamic array, tức là array được cấp phát động bằng Allocator 92
+- List là double linked list
+- Vector là dynamic array, tức là array được cấp phát động bằng Allocator
 
 Khi nào nên dùng list và khi nào nên dùng vector?
 
@@ -195,9 +198,24 @@ Truy xuất phần tử chậm vì các phần tử không có index thực, ph�
 
 18, dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread?
 
-19, pure virtual khai báo như nào, có đặc điểm gì?
+19, Pure virtual khai báo như nào, có đặc điểm gì?
+- Hàm ảo thuần túy là một hàm ảo trong C ++ mà chúng ta không cần phải viết bất kỳ định nghĩa hàm nào và chỉ chúng ta phải khai báo nó. Nó được khai báo bằng cách gán 0 trong khai báo.
+
+- Abstract class có thể có các hàm và biến thông thường cùng với một hàm thuần ảo.
+
+- Abstract class không thể được khởi tạo, nhưng con trỏ và tham chiếu của loại lớp Trừu tượng có thể được tạo.
+
+- Abstract class chủ yếu được sử dụng cho Upcasting, do đó các lớp dẫn xuất của nó có thể sử dụng giao diện của nó.
+
+- Nếu Abstract class có lớp dẫn xuất, chúng phải thực hiện tất cả các hàm ảo thuần túy, nếu không chúng cũng sẽ trở thành Trừu tượng.
+
+- Chúng ta có thể tạo đối tượng của Abstract class khi chúng tôi dành một vị trí cho một hàm thuần ảo trong Vtable, nhưng chúng ta không đặt bất kỳ địa chỉ nào, vì vậy Vtable sẽ không đầy đủ.
 
 20, guard header file là gì,tại sao cần guard header?
+- Header guard (hay còn gọi là inlcude guard) là một phương pháp cực kì đơn giản để tránh việc include header file 2 lần trong một file source.
+- Hiện nay rất nhiều compiler hổ trợ #pragma once, và nó có mục đích tương tự như header guard.
+- Tuy nhiên, #pragma once không phải là thành phần chính thức trong C++, không phải compiler nào cũng hổ trợ.
+- Nên sử dụng header guard thay vì #pragma once
 
 21, khi nào dùng friend class?
 
@@ -205,6 +223,8 @@ Truy xuất phần tử chậm vì các phần tử không có index thực, ph�
 
 23, smart pointer && overload operator?
 
-24, Link list?
+24, Linked Lists?
 
-25, Đệ Quy?
+25, Stack, queue, heap.
+
+26, Đệ Quy?
