@@ -1,62 +1,52 @@
-﻿#include <iostream>
+#include <iostream>
 #include <ctime>
 #include <cmath>       // Thư viện toán học của C++
 using namespace std;
 
-void TaoNgauNhien(int* a, int n)
-{
+void TaoNgauNhien(int* a, int n) {
 	srand(time(0));
-	for(int i = 0; i < n; i++)
-	{
+	for(int i = 0; i < n; i++) {
 		a[i] = rand()% 50 + 0;
 	}
 }
 
-void XuatMang(int* a, int n)
-{
+void XuatMang(int* a, int n) {
 	for(int i = 0; i < n; i++)
 		cout<<a[i]<<"\t";
 }
-bool KiemTraLonHon(int x, int y)
-{
-	if(x > y)
-		return true;
-	return false;
+
+bool KiemTraLonHon(int x, int y) {
+	return x > y;
 }
-bool KiemTraNhoHon(int x, int y)
-{
-	if(x < y)
-		return true;
-	return false;
+
+bool KiemTraNhoHon(int x, int y) {
+	return x < y;
 }
-int TimMaxOrMin(int* a, int n,bool (*p)(int, int) )
-{
+
+int TimMaxOrMin(int* a, int n,bool (*p)(int, int)) {
 	int M = a[0];
-	for(int i = 1; i < n; i++)
-	{
+	for(int i = 1; i < n; i++) {
 		if(p(a[i], M)) 
 			M = a[i];
 	}
 	return M;
 }
 
-void HoanVi(int& x, int& y)
-{
+void HoanVi(int& x, int& y) {
 	int temp = x;
 	x = y;
 	y = temp;
 }
-void SapXepTangOrGiam(int* a, int n, bool (*p)(int, int))
-{
-	for(int i = 0; i < n - 1; i++)
-	{
-		for(int j = i + 1; j < n; j++)
-		{
+
+void SapXepTangOrGiam(int* a, int n, bool (*p)(int, int)) {
+	for(int i = 0; i < n - 1; i++) {
+		for(int j = i + 1; j < n; j++) {
 			if(p(a[i], a[j]))
 				HoanVi(a[i], a[j]);
 		}
 	}
 }
+
 // 1. Tính tổng các số nguyên tố
 // 2. Tính tổng các số chính phương
 // 3. Tính tổng các số có chữ số đầu là chữ số chẵn
@@ -80,38 +70,32 @@ bool KiemTraNguyenTo(int n)
 	return true;
 }
 
-bool KiemTraChinhPhuong(int n)
-{
+bool KiemTraChinhPhuong(int n) {
 	int canbac2 = sqrt(n);
 	if(canbac2 * canbac2 == n)
 		return true;
 	return false;
 }
-bool KiemTraChuSoDauLaChan(int n)
-{
+
+bool KiemTraChuSoDauLaChan(int n) {
 	int temp = n;
-	while(temp >= 10)
-	{
+	while(temp >= 10) {
 		temp /= 10;
 	}
-	if(temp % 2 == 0)
-		return true;
-	return false;
+	return temp % 2 == 0;
 }
-int TongTuyChon(int* a, int n, bool (*p)(int))
-{
+
+int TongTuyChon(int* a, int n, bool (*p)(int)) {
 	int tong = 0;
-	for(int i = 0; i < n; i++)
-	{
-		if(p(a[i]) == true)
-		{
+	for(int i = 0; i < n; i++) {
+		if(p(a[i]) == true) {
 			tong += a[i];
 		}
 	}
 	return tong;
 }
-void main()
-{
+
+int main() {
 	int n = 5;
 	int* a = NULL;
 	a = new int[n]; // Cấp phát 
@@ -137,6 +121,7 @@ void main()
 	if( a != NULL)
 		delete []a;
 	system("pause");
+	return 0;
 }
 //
 //Hãy ứng dụng con trỏ cấp 1,con trỏ hàm để tùy biến mã nguồn CT sau.Qua đó ta có thể thấy sức mạnh của con trỏ hàm
