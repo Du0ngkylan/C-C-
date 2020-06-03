@@ -366,13 +366,13 @@ class Person {
 | | | |
 |Chức năng|	Semaphore cho phép nhiều luồng chương trình truy cập vào một thể hiện hữu hạn của tài nguyên.|	Mutex cho phép nhiều luồng chương trình truy cập vào một tài nguyên nhưng không đồng thời.|
 | | | |
-|Quyền sở hữu|	Giá trị semaphore có thể được thay đổi bởi bất kỳ quá trình có được hoặc giải phóng tài nguyên.	Khóa đối tượng Mutex chỉ được phát hành bởi quá trình đã có được khóa trên nó.|
+|Quyền sở hữu|	Giá trị semaphore có thể được thay đổi bởi bất kỳ quá trình có được hoặc giải phóng tài nguyên.|	Khóa đối tượng Mutex chỉ được phát hành bởi quá trình đã có được khóa trên nó.|
 | | | |
 |Phân loại|	Semaphore có thể được phân loại thành đếm semaphore và semaphore nhị phân.|	Mutex không được phân loại thêm.|
 | | | |
 |Hoạt động|	Giá trị semaphore được sửa đổi bằng cách sử dụng thao tác Wait () và signal ().|	Đối tượng Mutex bị khóa hoặc mở khóa bởi quá trình yêu cầu hoặc giải phóng tài nguyên.|
 | | | |
-|Tài nguyên chiếm dụng|	Nếu tất cả các tài nguyên đang được sử dụng, quá trình yêu cầu tài nguyên thực hiện thao tác Wait () và tự chặn cho đến khi số lượng semaphore trở nên lớn hơn một.|	Nếu một đối tượng mutex đã bị khóa, quá trình yêu cầu tài nguyên chờ và được hệ thống xếp hàng cho đến khi khóa được giải phóng.|
+|Tài nguyên chiếm dụng|	Nếu tất cả các tài nguyên đang được sử dụng, quá trình yêu cầu tài nguyên thực hiện thao tác Wait () và tự chặn cho đến khi số lượng semaphore trở nên lớn hơn một.| Nếu một đối tượng mutex đã bị khóa, quá trình yêu cầu tài nguyên chờ và được hệ thống xếp hàng cho đến khi khóa được giải phóng.|
 | | | |
 
 #### Sự khác biệt chính giữa Semaphore và Mutex
