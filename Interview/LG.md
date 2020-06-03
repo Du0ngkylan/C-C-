@@ -309,3 +309,33 @@ class Person {
 ### 25, Stack, queue, heap.
 
 ### 26, Đệ Quy?
+
+### 27, Sự khác biệt giữa Semaphore và Mutex
+|Cơ sở để so sánh|	Semaphore|	Mutex|
+|:---------------|:----------|:-----------|
+|Căn bản|	Semaphore là một cơ chế báo hiệu.|	Mutex là một cơ chế khóa.|
+| | | |
+|Sự tồn tại|	Semaphore là một biến số nguyên.|	Mutex là một đối tượng.|
+| | | |
+|Chức năng|	Semaphore cho phép nhiều luồng chương trình truy cập vào một thể hiện hữu hạn của tài nguyên.|	Mutex cho phép nhiều luồng chương trình truy cập vào một tài nguyên nhưng không đồng thời.|
+| | | |
+|Quyền sở hữu|	Giá trị semaphore có thể được thay đổi bởi bất kỳ quá trình có được hoặc giải phóng tài nguyên.	Khóa đối tượng Mutex chỉ được phát hành bởi quá trình đã có được khóa trên nó.|
+| | | |
+|Phân loại|	Semaphore có thể được phân loại thành đếm semaphore và semaphore nhị phân.|	Mutex không được phân loại thêm.|
+| | | |
+|Hoạt động|	Giá trị semaphore được sửa đổi bằng cách sử dụng thao tác Wait () và signal ().|	Đối tượng Mutex bị khóa hoặc mở khóa bởi quá trình yêu cầu hoặc giải phóng tài nguyên.|
+| | | |
+|Tài nguyên chiếm dụng|	Nếu tất cả các tài nguyên đang được sử dụng, quá trình yêu cầu tài nguyên thực hiện thao tác Wait () và tự chặn cho đến khi số lượng semaphore trở nên lớn hơn một.|	Nếu một đối tượng mutex đã bị khóa, quá trình yêu cầu tài nguyên chờ và được hệ thống xếp hàng cho đến khi khóa được giải phóng.|
+| | | |
+
+#### Sự khác biệt chính giữa Semaphore và Mutex
+- Semaphore là một cơ chế báo hiệu khi hoạt động Wait () và signal () được thực hiện trên biến semaphore cho biết liệu một quá trình có thu được tài nguyên hay giải phóng tài nguyên hay không. Mặt khác, mutex là một cơ chế khóa, vì để có được một tài nguyên, một quá trình cần phải khóa đối tượng mutex và trong khi phát hành một quy trình tài nguyên phải mở khóa đối tượng mutex.
+- Semaphore thường là một biến số nguyên trong khi đó, mutex là một đối tượng .
+- Semaphore cho phép nhiều luồng chương trình truy cập vào tài nguyên hữu hạn . Mặt khác, Mutex cho phép nhiều luồng chương trình truy cập vào một tài nguyên được chia sẻ nhưng mỗi lần một tài nguyên .
+- Giá trị biến semaphore có thể được sửa đổi bởi bất kỳ quá trình nào có được hoặc giải phóng tài nguyên bằng cách thực hiện thao tác Wait () và signal (). Mặt khác, khóa thu được trên đối tượng mutex chỉ có thể được giải phóng bằng quá trình đã thu được khóa trên đối tượng mutex.
+- Semaphore có hai loại đếm semaphore và semaphore nhị phân khá giống với mutex.
+- Giá trị biến semaphore được sửa đổi bằng thao tác Wait () và signal () ngoài khởi tạo. Tuy nhiên, đối tượng tắt tiếng bị khóa hoặc mở khóa bằng quá trình lấy hoặc giải phóng tài nguyên.
+- Nếu tất cả các tài nguyên được thu thập bởi quy trình và không có tài nguyên nào là miễn phí thì quy trình mong muốn có được tài nguyên thực hiện thao tác Wait () trên biến semaphore và tự chặn cho đến khi số lượng semaphore lớn hơn 0. Nhưng nếu một đối tượng mutex đã bị khóa sau đó quá trình mong muốn có được tài nguyên chờ đợi và được hệ thống xếp hàng cho đến khi tài nguyên được giải phóng và đối tượng mutex được mở khóa.
+
+- Semaphore là một lựa chọn tốt hơn trong trường hợp có nhiều phiên bản tài nguyên có sẵn. Trong trường hợp mutex tài nguyên chia sẻ duy nhất là một lựa chọn tốt hơn.
+
