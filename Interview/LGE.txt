@@ -78,14 +78,23 @@ float *ptr = new float[num];
 delete [] ptr;
 
 3, khác nhau malloc and calloc
+
 4, dùng hàm gì để khởi tạo giá trị các ô nhớ sau khi dùng malloc
+
 5, thu hồi bộ nhớ c(free), c++ (delete)
+
 6, 4 tính chất hướng đối tượng c++ là gì?
+
 7, cho 1 ví dụ về tính đa hình
+
 8, overload, override khác nhau như nào
+
 9, khi nào xảy ra memory leak
+
 10, vì sao destructor của class cha nên khai báo virtual
+
 11, truyền tham trỏ, tham trị, tham chiếu khác nhau như nào, khi nào dùng loại nào
+
 12, kích thước struct tính như nào, alignment memory là gì ?
 - size của struct phải là tổng size của các thành phần bên trong nó.
 - Data Structure Alignment là gì?
@@ -154,47 +163,25 @@ Chèn phần tử, xóa phần tử nhanh, không cần một khoảng nhớ li�
 Truy xuất phần tử chậm vì các phần tử không có index thực, phải duyệt danh sách phần tử cho tới khi tới được phần tử cần.
 
 15, vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó
+
 16, multi thread và multi process khác nhau như nào
+
 17, khi dùng multi thread phải chú ý gì
+
 18, dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread
+
 19, pure virtual khai báo như nào, có đặc điểm gì?
+
 20, guard header file là gì,tại sao cần guard header
+
 21, khi nào dùng friend class
+
 22, dll và lib khác nhau như nào?
+
 23, smart pointer && overload operator
+
 24, Link list
+
 25, Đệ Quy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
