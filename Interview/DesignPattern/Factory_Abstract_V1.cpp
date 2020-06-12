@@ -36,7 +36,7 @@ public:
 };
 
 
-class WoodProduct : BaseProduct {
+class WoodProduct : public BaseProduct {
 public:
 	void create(SP sp) {
 		if (sp == SP::CHAIR_SP) {
