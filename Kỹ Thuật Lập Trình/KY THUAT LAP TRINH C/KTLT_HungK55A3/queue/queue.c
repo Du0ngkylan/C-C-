@@ -1,24 +1,14 @@
-/*
- * queue.c
- *
- *  Created on: Jul 31, 2013
- *      Author: hung
- * songuyentolinklist.c
- *
- *  Created on: Jul 31, 2013
- *      Author: hung
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+
 struct nguyento{
 	int songuyento;
 	struct nguyento*next;
 };
+
 struct nguyento*list=NULL;
 struct nguyento *pRear = NULL;
-
 
 struct nguyento* enqueue(int songuyento) {
 	struct nguyento *element = (struct nguyento*)malloc(sizeof(struct nguyento));
@@ -32,6 +22,7 @@ struct nguyento* enqueue(int songuyento) {
 	pRear = element;
 	return list;
 }
+
 struct nguyento *addElement(struct nguyento*list,int songuyento){
 	struct nguyento*element = enqueue(songuyento);
 	if(element==NULL){
@@ -58,7 +49,6 @@ int songuyento(int n){
 	}
 }
 
-
 struct nguyento*taodanhsachsonguyento(int n,struct nguyento*list){
 	int i;
 	for(i=1;i<=n;i++){
@@ -77,9 +67,7 @@ void indanhsach(struct nguyento*list){
 	}
 }
 
-
 int main(){
-	setvbuf(stdout,NULL,_IONBF,0);
 	int n;
 	struct nguyento*a;
 	printf("nhap vao so n bat ki : ");scanf("%d",&n);

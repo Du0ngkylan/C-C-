@@ -173,8 +173,7 @@ int ancessor(TREE root,int p,int q){
 
 
 int main(){
-	setbuf(stdout,NULL);
-	int p=0;
+	int p = 0;
 	TREE root=NULL;
 	root=creatTree(root);
 	visitTree(root);

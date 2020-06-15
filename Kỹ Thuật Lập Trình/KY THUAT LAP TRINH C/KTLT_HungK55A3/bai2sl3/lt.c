@@ -1,10 +1,3 @@
-/*
- * lt.c
- *
- *  Created on: Aug 10, 2013
- *      Author: hung
- */
-
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
@@ -152,7 +145,6 @@ void freedom(struct sinhvien*list){
 
 
 int main(){
-	setvbuf(stdout,NULL,_IONBF,0);
 	int n;
 	list=doctep(&n);
 	in(list);

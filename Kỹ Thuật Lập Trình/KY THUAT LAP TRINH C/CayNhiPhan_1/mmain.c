@@ -82,7 +82,6 @@ void visitTree(TREE root){
 }
 
 int main(){
-	setbuf(stdout,NULL);
 	TREE root=NULL;
 	createTree(root);
 	visitTree(root);
