@@ -259,7 +259,7 @@ Khi ta cần thêm/xóa phần tử ở giữa mảng hoặc ở đầu mảng n
 Thêm vào cuối mảng nhanh, truy xuất phần tử nhanh vì mỗi phần tử đều có index.
 
 ####Nhược của vector:
-Chèn phần tử chậm, cần một khoảng nhớ liên tiếp để chứa mảng. Khi hết chứa đủ mảng thì cần phải allocate/move 31 một mảng mới với số phần tử gấp đôi.
+Chèn phần tử chậm, cần một khoảng nhớ liên tiếp để chứa mảng. Khi hết chứa đủ mảng thì cần phải allocate/move một mảng mới với số phần tử gấp đôi.
 
 ####Ưu của list:
 Chèn phần tử, xóa phần tử nhanh, không cần một khoảng nhớ liên tiếp để chứa các phần tử vì nó là double linked list
@@ -267,9 +267,52 @@ Chèn phần tử, xóa phần tử nhanh, không cần một khoảng nhớ li�
 ####Nhược của list:
 Truy xuất phần tử chậm vì các phần tử không có index thực, phải duyệt danh sách phần tử cho tới khi tới được phần tử cần.
 
-### 16, vì sao sau khi delete con trỏ thì nên gán giá trị nullptr cho nó?
+### 16, Hàm inline đặc điểm?
+- Hàm inline được sử dụng để yêu cầu trình biên dịch (compiler) thay thế lời gọi hàm bằng toàn bộ mã code của hàm nhằm mục đích giảm thời gian chạy chương trình.
+- Hàm inline được sử dụng khi:
+	+ Trong chương trình, khi cần thời gian thực hiện ngắn (ưu tiên hiệu suất), và chắc chắn rằng việc sử dụng sẽ mang lại hiệu suất.
+	+ Các hàm có nội dung rất nhỏ và được gọi rất thường xuyên.
+	+ Sử dụng hàm inline trong class, nên sử dụng từ khóa inline bên ngoài lớp với định nghĩa hàm.
+- Trường hợp không nên sử dụng hàm inline:
+	+ Do quá trình compiler thay thế các vị trí gọi hàm bằng nôi dung hàm nên các trường hợp hàm lớn, phức tạp, nếu sử dụng hàm inline sẽ dẫn tới tệp thực thi lớn và sẽ tốn tài nguyên để lưu các biến trong hàm inline.
+	+ Hàm khởi tạo và hàm hủy.
+	+ Hàm ảo hầu như sẽ không được là hàm inline. -> Hàm ảo khi được gọi bằng tham chiếu của lớp cơ sở hoặc con trỏ, thì không thể là inline_function (vì lời gọi sẽ được giải quyết trong thời gian chạy chương trình). Nhưng khi được gọi bằng cách sử dụng đối tượng (không có tham chiếu hoặc con trỏ) của lớp đó, có thể là inline_function vì trình biên dịch biết chính xác lớp của đối tượng trong thời gian biên dịch chương trình. 
 
-### 17, multi thread và multi process khác nhau như nào?
+- Trình biên dịch có thể không thực hiện nội tuyến trong các trường hợp như:
+
+	+ Hàm chứa vòng lặp (for, while, do-while).
+	+ Hàm chứa các biến tĩnh.
+	+ Hàm đệ quy.
+	+ Hàm chứa câu lệnh switch hoặc goto.
+	
+Ưu điểm:
+- Tiết kiệm chi phí gọi hàm.
+- Tiết kiệm chi phí của các biến trên ngăn xếp khi hàm được gọi.
+- Tiết kiệm chi phí cuộc gọi trả về từ một hàm.
+- Có thể đặt định nghĩa hàm nội tuyến (inline functions) trong file tiêu đề (*.h) (nghĩa là nó có thể được include trong nhiều đơn vị biên dịch, hàm thông thường sẽ gây ra lỗi).
+
+Nhược điểm:
+- Tăng kích thước file thực thi do sự trùng lặp của cùng một mã.
+- Khi được sử dụng trong file tiêu đề (*.h), nó làm cho file tiêu đề của bạn lớn hơn.
+- Hàm nội tuyến có thể không hữu ích cho nhiều hệ thống nhúng. Vì trong các hệ thống nhúng, kích thước mã quan trọng hơn tốc độ.
+
+### 17, Biến static và hàm thành viên static?
+
+- Biến được định nghĩa bên trong một khối lệnh (block) được gọi là các biến cục bộ (Local variables).
+- Biến cục bộ có thời gian tự động, nghĩa là chúng được tạo tại thời điểm định nghĩa, và bị hủy khi ra khỏi khối lệnh mà biến đó được định nghĩa</br>
+
+Khi sử dụng từ khóa “static” với các biến cục bộ, nó sẽ trở thành biến tĩnh (static variables).
+
+- Biến tĩnh (static variables) là biến được tạo ra duy nhất một lần khi gọi hàm lần đầu tiên và nó sẽ tiếp tục tồn trong suốt vòng đời của chương trình. Đây là sự khác biệt giữa biến tĩnh và biến cục bộ.
+
+Biến tĩnh (static variables) là loại biến lưỡng tính, vừa có tính chất của 1 biến toàn cục (global variables), vừa mang tính chất của 1 biến cục bộ (local variables):
+
+- Tính chất của biến toàn cục: biến không mất đi khi khối lệnh định nghĩa nó kết thúc, nó vẫn nằm trong vùng nhớ của chương trình và được tự động cập nhật khi khối lệnh đó được gọi lại.
+- Tính chất của biến cục bộ: biến chỉ có thể được sử dụng trong khối lệnh mà nó được khai báo.</br>
+
+Sử dụng biến tĩnh khi có nhu cầu giữ giá trị của biến trong chương trình.
+
+### 18, multi thread và multi process khác nhau như nào?
 - Điểm quan trọng nhất cần chú ý là một thread có thể làm bất cứ nhiệm vụ gì một process có thể làm. Tuy nhiên, vì một process có thể chứa nhiều thread, mỗi thread có thể coi như là một process nhỏ. Vậy, điểm khác biệt mấu chốt giữa thread và process là công việc mỗi cái thường phải làm. 
 
 - Một điểm khác biệt nữa đó là nhiều thread nằm trong cùng một process dùng một không gian bộ nhớ giống nhau, trong khi process thì không. Điều này cho phép các thread đọc và viết cùng một kiểu cấu trúc và dữ liệu, giao tiếp dễ dàng giữa các thread với nhau. Giao thức giữa các process, hay còn gọi là IPC (inter-process communication) thì tương đối phức tạp bởi các dữ liệu có tính tập trung sâu hơn.
@@ -282,11 +325,11 @@ Sau đây là bảng tổng kết sự khác nhau giữa thread và process:
 - Các process chạy độc lập với nhau. Các thread thì sử dụng chung các địa chỉ nhớ liên kết với nhau, vì thế cần thận trọng tránh việc thread này nhảy sang thread khác. (Điều đã được nhắc đến trong ý thứ 2 vừa trên)
 - Một process có thể chứa nhiều thread. 
 
-### 18, khi dùng multi thread phải chú ý gì?
+### 19, Khi dùng multi thread phải chú ý gì? Dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread?
 
-### 19, dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread?
+### 20, So sánh sự khác nhau giữa abstract class và interface?
 
-### 20, Pure virtual khai báo như nào, có đặc điểm gì?
+### 21, Pure virtual khai báo như nào, có đặc điểm gì?
 - Hàm ảo thuần túy là một hàm ảo trong C ++ mà chúng ta không cần phải viết bất kỳ định nghĩa hàm nào và chỉ chúng ta phải khai báo nó. Nó được khai báo bằng cách gán 0 trong khai báo.
 
 - Abstract class có thể có các hàm và biến thông thường cùng với một hàm thuần ảo.
@@ -299,13 +342,13 @@ Sau đây là bảng tổng kết sự khác nhau giữa thread và process:
 
 - Chúng ta có thể tạo đối tượng của Abstract class khi chúng tôi dành một vị trí cho một hàm thuần ảo trong Vtable, nhưng chúng ta không đặt bất kỳ địa chỉ nào, vì vậy Vtable sẽ không đầy đủ.
 
-### 21, guard header file là gì,tại sao cần guard header?
+### 22, guard header file là gì,tại sao cần guard header?
 - Header guard (hay còn gọi là inlcude guard) là một phương pháp cực kì đơn giản để tránh việc include header file 2 lần trong một file source.
 - Hiện nay rất nhiều compiler hổ trợ #pragma once, và nó có mục đích tương tự như header guard.
 - Tuy nhiên, #pragma once không phải là thành phần chính thức trong C++, không phải compiler nào cũng hổ trợ.
 - Nên sử dụng header guard thay vì #pragma once
 
-### 22, Khi nào dùng friend class?
+### 23, Khi nào dùng friend class?
 Mục đích:
 - Friend được xây dựng để khắc phục điểm yếu lớp dẫn xuất không thể truy cập tới các biến private của lớp cơ sở.
 
@@ -337,7 +380,7 @@ class Person {
 };
 ```
 
-### 23, dll và lib khác nhau như nào?
+### 24, dll và lib khác nhau như nào?
 – Dynamic Link library (.dll, .so, .dylib) : chứa mã nhị phân, là ngôn ngữ bậc thấp của hệ điều hành, do đó chúng ta không thể mở nó ra như mở file text được.Các chương trình (hay các file .exe) có sử dụng đến thư viện liên kết động sẽ đọc code trong các file .dll (hay .so trên linux…) này để sử dụng trong quá trình chạy.
  
 – Static library (.lib, .a): chứa mã nhị phân, chúng được các chương trình gọi tới trong quá trình biên dịch,  bây giờ code trong file .exe của bạn sẽ bao gồm code của cả file thư viện.
@@ -349,15 +392,15 @@ class Person {
 - Thư viện liên kết tĩnh thì ngược lại, chúng sẽ làm cho chương trình của bạn phình to ra do phải copy code trong thư viện vào code của chính nó.
 - chương trình của bạn sẽ chạy rất nhanh, bởi vì chúng không mất thời gian mở các file .dll ra để đọc code, chúng đã có sẵn code trong RAM cùng với code của mình rồi.
 
-### 24,  Overload operator?
+### 25,  Overload operator?
 
-### 25, Linked Lists?
+### 26, Linked Lists?
 
-### 26, Stack, queue, heap.
+### 27, Stack, queue, heap.
 
-### 27, Đệ Quy?
+### 28, Đệ Quy?
 
-### 28, Sự khác biệt giữa Semaphore và Mutex
+### 29, Sự khác biệt giữa Semaphore và Mutex
 |Cơ sở để so sánh|	Semaphore|	Mutex|
 |:---------------|:----------|:-----------|
 |Căn bản|	Semaphore là một cơ chế báo hiệu.|	Mutex là một cơ chế khóa.|
