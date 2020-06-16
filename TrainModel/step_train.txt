@@ -1,0 +1,39 @@
+step by step train model
+
+
+1. Tạo file list
+
+input : folder 2 folder (train || val) chứa image cần trainning.
+output: train.txt and val.txt
+run script: 
+
+Format file output như sau: image_name - label
+
+2. Tạo lmdb database
+
+intput: file train.txt và val.txt
+output: train/data.mdb
+        train/lock.mdb
+				val/data.mdb
+				val/lock.mdb
+				
+command: ./build/tools/convert_imageset --resize_height=224 --resize_width=224 "File_input" "Folder_output"
+
+note: file_input là train.txt và val.txt
+
+3. Tạo file mean
+
+input: folder chứa file train.txt
+output: Tạo ra file *.binaryproto
+
+command: ./build/tools/compute_image_mean folder_train train_mean.binaryproto
+
+
+4. Train custom model
+
+input: solver.prototxt
+
+output: file *.caffemodel
+
+command : ./build/tools/caffe train --solver= "folder chứa file solver.prototxt"
+
