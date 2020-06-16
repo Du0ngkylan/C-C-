@@ -1,0 +1,37 @@
+https://github.com/BVLC/caffe/wiki/Solver-Prototxt
+
+Solver Prototxt
+
+các tham số define:
++ base_lr : Tốc độ học tập cơ bản (bắt đầu) của mạng, Giá trị là một số thực.
+
++ lr_policy : Tốc độ học tập sẽ thay đổi theo thời gian như thế nào. Giá trị này là một chuỗi trích dẫn.
+
+option :
+ - step : giảm tốc độ train trong các kích cỡ bước được chỉ định bởi tham số gamma.
+ - multistep: giảm tốc độ train theo kích thước bước được chỉ định bởi gamma ở mỗi giá trị stepvalue.
+ - fixed : không thay đổi
+ - exp : base_lr * gamma^iter
+ - poly : tỷ lệ học tập hiệu quả sau khi phân rã đa thức, bằng 0 bở max_iter. base_lr * (1 - iter/max_iter) ^ (power)
+ - sigmoid :
+
+---------------------------------------------------------------------------------------------------------------------
+
++ gamma           :
++ stepsize        :
++ stepvalue       :
++ max_iter        :
++ momentum        :
++ weight_decay    :
++ random_seed     :
++ solver_mode     : Chế độ được sử dụng để giải quyết mạng. CPU hoặc GPU
++ snapshot        : Số lần caffe nên tạo ra một model and solverstate.
++ snapshot_prefix : Tiền tố của tên file output.
++ net             : Đường dẫn đến file *.prototxt được dùng để train
++ iter_size       : 
++ test_iter       : Số lần lặp kiểm tra sẽ xảy ra trên mỗi test_interval.
++ test_interval   : Tần suất của giai đoạn thử nghiệm của mạng sẽ được thực hiện.
++ display         : Số lần caffe nên xuất kết quả ra màn hình. Giá trị này là một số nguyên dương và chỉ định số lần lặp.
++ type            : Thuật toán được sử dụng để huấn luyện mạng.
+
+
