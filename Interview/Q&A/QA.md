@@ -328,6 +328,33 @@ Sau đây là bảng tổng kết sự khác nhau giữa thread và process:
 ### 19, Khi dùng multi thread phải chú ý gì? Dùng hàm gì để tránh gây xung đột bộ nhớ khi dùng multi thread?
 
 ### 20, So sánh sự khác nhau giữa abstract class và interface?
+Interface:
+- Không phải là class.
+- Chỉ chứa những method/properties trống không có thực thi.
+- Nó giống như một khuôn mẫu, một khung để để các lớp implement và follow.
+- Các lớp có thể implements nhiều interface.
+- Là một contract, các class implement phải triển khai các method theo như interface đã định nghĩa.
+
+Abstract class:
+- Khá giống Interface nhưng nó có thể làm nhiều việc hơn.
+- Có 2 loại method là abstract method và method thường:
+- abstract method là method trống không có thực thi.
+- method thường là method có thực thi.
+- Các lớp chỉ có thể kế thừa một Abstract class
+- Hướng đến tính năng và những tính năng có thực thi được sử dụng làm hàm chung cho các class extend.
+
+Ưu điểm:
+- Interface
+	+ Có thể kế thừa nhiều interface(tính đa hình).
+	+ Xây dựng được bộ khung mẫu mà các lớp phải follow theo.
+	+ Giúp quản lý tốt, nắm bắt được các chức năng phải có cho một đối tượng nào đó.
+- Abstract class
+	+ Có thể linh động các method. giống như một class thông thường.
+	+ Các class extend có thể override hoặc không override các method thường.
+
+Nhược điểm:
+- Interface: Mỗi khi định nghĩa thêm tính năng, các class impelement nó đồng lọat phải thêm tính năng đó, khả năng cao sẽ không có xử lý gì.
+- Abstract class: Không thể extend nhiều abstract class.
 
 ### 21, Pure virtual khai báo như nào, có đặc điểm gì?
 - Hàm ảo thuần túy là một hàm ảo trong C ++ mà chúng ta không cần phải viết bất kỳ định nghĩa hàm nào và chỉ chúng ta phải khai báo nó. Nó được khai báo bằng cách gán 0 trong khai báo.
