@@ -1,5 +1,7 @@
 #include <iostream>
-
+#include <cstdlib>
+#include <iomanip>
+#include <ctime>
 using namespace std;
 
 void swap(int &a, int &b) {
@@ -28,7 +30,8 @@ void bubbleSort(int arr[], int n) {
           swap(arr[j], arr[j+1]); 
           swapped = true; // Kiểm tra lần lặp này có swap không
        } 
-    } 
+    }
+    printArray(arr, n);
     // Nếu không có swap nào được thực hiện => mảng đã sắp xếp. Không cần lặp thêm
     if (swapped == false) 
       break; 
@@ -68,7 +71,12 @@ void insertionSort(int arr[], int n) {
 
 int main() {
   int arr[] = {64, 34, 25, 12, 22, 11, 90};
-  int n = sizeof(arr)/sizeof(arr[0]); 
+  int n = sizeof(arr)/sizeof(arr[0]);
+  selectionSort(arr, n);
   
+  cout << "Mang sau khi sap xep la: " << endl;
+  printArray(arr, n);
+  
+  system("PAUSE");
   return 0; 
 }
