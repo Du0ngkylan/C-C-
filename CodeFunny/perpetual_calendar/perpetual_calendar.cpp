@@ -5,12 +5,12 @@
 using namespace std;
  
 
-int firstDayofNewYearAndMonth (int );
-int numOfDaysInAMonth (int); 
+int firstDayofNewYearAndMonth (int);
+int numOfDaysInAMonth (int, bool); 
 void printHeader (int); 
 void printMonth (int, int&); 
 void skipToDay (int);
-
+bool checkYear(int);
  
 int main () 
 {
@@ -20,16 +20,17 @@ int main ()
     int numDays;
    
     cout << "Ban muon xem lich cua nam nao ? ";
-    cin >>year;
+    cin >> year;
     
-    cout<<endl;
+    cout << endl;
     
-    firstDayInCurrentMonth=firstDayofNewYearAndMonth(year);
+    firstDayInCurrentMonth = firstDayofNewYearAndMonth(year);
+    bool IsCheck = checkYear(year);
    
     cout << year << endl;
     
     while (currentMonth <= 12) {
-        numDays = numOfDaysInAMonth(currentMonth);
+        numDays = numOfDaysInAMonth(currentMonth, IsCheck);
         printHeader(currentMonth);
         printMonth(numDays, firstDayInCurrentMonth);
         cout << endl << endl << endl;
@@ -69,35 +70,25 @@ int  firstDayofNewYearAndMonth(int year) {
     return day_start; 
 } 
 
+bool checkYear(int year) { 
+  // Trả về true nếu
+  // chia hết cho 4 nhưng không chia hết cho 100 
+  // hoặc chia hết cho 400
+  return (((year % 4 == 0) && (year % 100 != 0)) || 
+          (year % 400 == 0)); 
+}
+
 /**************************************************************************/    
 /* This function returns the number of days in a month                    */
 /**************************************************************************/
 
-int numOfDaysInAMonth (int m){
-    if (m == 1) 
+int numOfDaysInAMonth (int m, bool IsCheck){
+    if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) 
         return(31);
     else if (m == 2) 
-        return(28);  
-    else if (m == 3) 
-        return(31);
-    else if (m == 4) 
+        return IsCheck == true ? (29) : (28);
+    else if (m == 4 || m == 6 || m == 9 || m == 11) 
         return(30);
-    else if (m == 5) 
-        return(31);
-    else if (m == 6) 
-        return(30);
-    else if (m == 7) 
-        return(31);
-    else if (m == 8) 
-        return(31);
-    else if (m == 9) 
-        return(30);
-    else if (m == 10) 
-        return(31);
-    else if (m == 11) 
-        return(30);
-    else if (m == 12) 
-        return(31);
 }
 
 /**************************************************************************/
